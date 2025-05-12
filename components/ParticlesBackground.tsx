@@ -40,9 +40,9 @@ export default function ParticlesBackground() {
         enable: false,
         zIndex: -1, // <- Damit liegt der Partikel-Canvas unter allem anderen
       },
-      background: {
-        color: '#18ffff', // optional
-      },
+      // background: {
+      //   // color: '#18ffff', // optional
+      // },
 
       fpsLimit: 120,
       interactivity: {
@@ -58,11 +58,11 @@ export default function ParticlesBackground() {
         },
         modes: {
           push: {
-            quantity: 4,
+            quantity: 5,
           },
           repulse: {
-            distance: 200,
-            duration: 0.4,
+            distance: 100,
+            duration: 0.1,
           },
         },
       },
@@ -72,7 +72,7 @@ export default function ParticlesBackground() {
         },
         links: {
           color: '#000000',
-          distance: 150,
+          distance: 200,
           enable: true,
           opacity: 0.5,
           width: 1,
@@ -84,14 +84,14 @@ export default function ParticlesBackground() {
             default: OutMode.out,
           },
           random: false,
-          speed: 6,
+          speed: 5,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 100,
         },
         opacity: {
           value: 0.5,
@@ -100,7 +100,7 @@ export default function ParticlesBackground() {
           type: 'circle',
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 2, max: 4 },
         },
       },
       detectRetina: true,
