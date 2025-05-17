@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
+import Nav from '@/components/Nav'; // ✅ hier hinzufügen
+import Footer from '@/components/Footer'; // ✅ hier hinzufügen
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -53,7 +55,9 @@ export default function RootLayout({
           enableSystem={true}
         >
           <div className="min-h-screen antialiased font-sans bg-background text-foreground">
+            <Nav /> {/* ✅ global sichtbar */}
             {children}
+            <Footer /> {/* ✅ global sichtbar */}
           </div>
         </ThemeProvider>
       </body>

@@ -4,24 +4,35 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
+import { usePathname } from 'next/navigation';
 
 export default function Nav() {
   const { theme, setTheme } = useTheme();
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  const [scrolled, setScrolled] = useState(!isHome);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (!isHome) return;
+
     const onScroll = () => {
       setScrolled(window.scrollY > 10);
-      if (window.scrollY > 10) setMenuOpen(false); // Menü schließen beim Scroll
+      if (window.scrollY > 10) setMenuOpen(false);
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [isHome]);
+
+  const navItems = [
+    { label: 'Leistungen', href: '/#services' },
+    { label: 'Referenzen', href: '/references' },
+    { label: 'Über uns', href: '/about' },
+  ];
 
   return (
     <>
-      {/* Navbar */}
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 transform ${
           scrolled
@@ -43,7 +54,7 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop */}
           <nav
             className={`hidden md:flex text-white items-center space-x-6 text-sm font-medium transition-all duration-500 transform ${
               scrolled
@@ -51,16 +62,18 @@ export default function Nav() {
                 : 'opacity-0 -translate-y-2 pointer-events-none'
             }`}
           >
-            <Link href="#services" className="hover:underline">
-              Leistungen
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="hover:underline"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link href="/#contact">
+              <Button variant="cyan">Jetzt beraten lassen</Button>
             </Link>
-            <Link href="#projects" className="hover:underline">
-              Projekte
-            </Link>
-            <Link href="#about" className="hover:underline">
-              Über uns
-            </Link>
-            <Button variant="cyan">Jetzt beraten lassen</Button>
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="ml-2 p-2 border rounded hover:bg-gray-100 dark:hover:bg-zinc-800 transition"
@@ -69,7 +82,7 @@ export default function Nav() {
             </button>
           </nav>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Button */}
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -82,21 +95,21 @@ export default function Nav() {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-white/95 dark:bg-zinc-900/95 z-40 flex flex-col items-center justify-center space-y-6 text-lg font-medium md:hidden">
-          <Link href="#services" onClick={() => setMenuOpen(false)}>
-            Leistungen
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link href="/#contact" onClick={() => setMenuOpen(false)}>
+            <Button variant="cyan">Jetzt beraten lassen</Button>
           </Link>
-          <Link href="#projects" onClick={() => setMenuOpen(false)}>
-            Projekte
-          </Link>
-          <Link href="#about" onClick={() => setMenuOpen(false)}>
-            Über uns
-          </Link>
-          <Button variant="cyan" onClick={() => setMenuOpen(false)}>
-            Jetzt beraten lassen
-          </Button>
           <button
             onClick={() => {
               setTheme(theme === 'dark' ? 'light' : 'dark');

@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "terminplanung-therapeuten",
+    "title": "KI-basierte Terminplanung",
+    "industry": "Gesundheitswesen",
+    "summary": "Smarte App zur Verwaltung von Terminen in einer Therapeutenpraxis.",
+    "image": "/images/image8.jpg",
+    "challenge": "Die manuelle Terminvergabe war fehleranfällig.",
+    "solution": "Web-App mit KI-Erinnerungssystem & Kalenderintegration.",
+    "result": "Reduktion der No-Shows um 40 %.",
+    "technologies": ["Next.js", "Tailwind", "Supabase", "GPT-API"]
+  },
+  {
+    "slug": "fechtsport-analytik",
+    "title": "Matchdatenanalyse für den Fechtsport",
+    "industry": "Sportdatenanalyse",
+    "summary": "Automatisiertes Scraping und Auswertung internationaler Fechtturniere.",
+    "image": "/images/image7.jpg",
+    "challenge": "Manuelle Datenpflege über Excel war fehleranfällig und langsam.",
+    "solution": "Python-Scraper mit Export in strukturierte CSV-Dateien, ergänzt um Ranking- und Händigkeitserkennung.",
+    "result": "Über 20.000 Matches automatisiert verarbeitet, 8h/Woche gespart.",
+    "technologies": ["Python", "Playwright", "Pandas", "Regex"]
+  },
+  {
+    "slug": "iot-kamera-reverse-engineering",
+    "title": "Tapo Kamera Sicherheitsanalyse",
+    "industry": "IoT / Embedded Security",
+    "summary": "Reverse Engineering einer Smart-Kamera zur Schwachstellenanalyse.",
+    "image": "/images/image6.jpg",
+    "challenge": "Keine Dokumentation, verschlüsseltes Dateisystem, kein Root-Zugriff.",
+    "solution": "Firmware-Dump mit binwalk & UART-Hack, API-Analyse über App-Traffic.",
+    "result": "Zugriff auf alle API-Endpunkte & PoC zur Rechteeskalation.",
+    "technologies": ["Linux", "Binwalk", "UART", "apktool", "Burp Suite"]
+  },
+  {
+    "slug": "bewegungsanalyse-rom",
+    "title": "ROM-Feedbacksystem für Therapie",
+    "industry": "Digital Health",
+    "summary": "Kopfbewegungserkennung mit SVG-Visualisierung und PDF-Export für Therapeuten.",
+    "image": "/images/image5.jpg",
+    "challenge": "Manuelle Dokumentation der Beweglichkeit war aufwendig und ungenau.",
+    "solution": "Kamera-basierte Erkennung von Yaw/Roll mit Echtzeit-Feedback auf SVG-Grafik.",
+    "result": "Exakte Verlaufskontrolle möglich, 60 % Zeitersparnis für Therapeuten.",
+    "technologies": ["React", "Canvas", "html2canvas", "pdf-lib"]
+  },
+  {
+    "slug": "chatbot-terminplanung",
+    "title": "Conversational Terminbot für Friseure",
+    "industry": "Einzelhandel / Dienstleistung",
+    "summary": "Dialogbasierter Terminassistent für kleine Friseursalons.",
+    "image": "/images/image4.jpg",
+    "challenge": "Kunden rufen spontan an – oft während Behandlungen.",
+    "solution": "Ein KI-gestützter Chatbot übernimmt Terminvergabe via WhatsApp & Web.",
+    "result": "98 % weniger Anrufe, bessere Terminübersicht & höhere Kundenzufriedenheit.",
+    "technologies": ["LangChain", "GPT-4", "Twilio", "Next.js"]
+  },
+  {
+    "slug": "retail-dashboard",
+    "title": "Dashboards für Lager & Verkauf",
+    "industry": "Einzelhandel",
+    "summary": "Visualisierung von Lagerbeständen, Bestsellern und Tagesumsätzen in Echtzeit.",
+    "image": "/images/image3.jpg",
+    "challenge": "Veraltete Excel-Dateien, keine zentrale Übersicht.",
+    "solution": "Webbasiertes KPI-Dashboard mit Barcodescanner-Integration & Rollenmanagement.",
+    "result": "Fehlende Produkte halbiert, Umsatz-Transparenz verbessert.",
+    "technologies": ["Next.js", "Supabase", "Chart.js", "Barcode SDK"]
+  }
+]
