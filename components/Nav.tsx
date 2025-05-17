@@ -36,7 +36,7 @@ export default function Nav() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 transform ${
           scrolled
-            ? 'opacity-100 translate-y-0 bg-white/70  backdrop-blur-md shadow-md'
+            ? 'opacity-100 translate-y-0 bg-black/70  backdrop-blur-md shadow-md'
             : 'opacity-0 -translate-y-2 pointer-events-none'
         }`}
       >
@@ -74,12 +74,12 @@ export default function Nav() {
             <Link href="/#contact">
               <Button variant="cyan">Jetzt beraten lassen</Button>
             </Link>
-            <button
+            {/* <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="ml-2 p-2 border rounded hover:bg-gray-100 transition"
             >
               {theme === 'dark' ? '🌞' : '🌙'}
-            </button>
+            </button> */}
           </nav>
 
           {/* Mobile Button */}

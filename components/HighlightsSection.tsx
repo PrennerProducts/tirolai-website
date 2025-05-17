@@ -15,7 +15,7 @@ export default function HighlightsSection() {
         </p>
       </div>
 
-      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-10">
+      <div className="max-w-5xl mx-auto bg-zinc-800 rounded-2xl shadow-xl p-8 sm:p-10">
         <div className="grid sm:grid-cols-3 gap-8 text-left">
           <Highlight
             icon={<Mountain className="w-8 h-8 text-cyan-600" />}
@@ -51,10 +51,12 @@ function Highlight({
   text: string;
 }) {
   return (
-    <div className="flex flex-col items-start">
-      <div className="mb-4">{icon}</div>
-      <h4 className="text-xl font-semibold text-gray-900  mb-2">{title}</h4>
-      <p className="text-zinc-700  leading-relaxed">{text}</p>
+    <div className="group flex flex-col items-start bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-6 transition hover:shadow-xl hover:bg-white/20 hover:-translate-y-1">
+      <div className="mb-4 text-cyan-500 group-hover:scale-110 transition-transform duration-300">
+        {icon}
+      </div>
+      <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
+      <p className="text-white/90 leading-relaxed">{text}</p>
     </div>
   );
 }

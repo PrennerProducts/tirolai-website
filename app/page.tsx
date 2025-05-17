@@ -36,7 +36,9 @@ export default function Home() {
       </div>
       <TestimonialsSection /> {/* 👈 Hier einfügen */}
       <HighlightsSection />
-      <ContactSection />
+      <div className="bg-zinc-800">
+        <ContactSection />
+      </div>
     </main>
   );
 }
