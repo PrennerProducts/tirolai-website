@@ -15,7 +15,7 @@ export default function HighlightsSection() {
         </p>
       </div>
 
-      <div className="max-w-5xl mx-auto bg-white dark:bg-zinc-800 rounded-2xl shadow-xl p-8 sm:p-10">
+      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-10">
         <div className="grid sm:grid-cols-3 gap-8 text-left">
           <Highlight
             icon={<Mountain className="w-8 h-8 text-cyan-600" />}
@@ -53,10 +53,8 @@ function Highlight({
   return (
     <div className="flex flex-col items-start">
       <div className="mb-4">{icon}</div>
-      <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-        {title}
-      </h4>
-      <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">{text}</p>
+      <h4 className="text-xl font-semibold text-gray-900  mb-2">{title}</h4>
+      <p className="text-zinc-700  leading-relaxed">{text}</p>
     </div>
   );
 }

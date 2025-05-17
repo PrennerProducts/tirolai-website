@@ -36,7 +36,7 @@ export default function Nav() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 transform ${
           scrolled
-            ? 'opacity-100 translate-y-0 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-md'
+            ? 'opacity-100 translate-y-0 bg-white/70  backdrop-blur-md shadow-md'
             : 'opacity-0 -translate-y-2 pointer-events-none'
         }`}
       >
@@ -76,7 +76,7 @@ export default function Nav() {
             </Link>
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="ml-2 p-2 border rounded hover:bg-gray-100 dark:hover:bg-zinc-800 transition"
+              className="ml-2 p-2 border rounded hover:bg-gray-100 transition"
             >
               {theme === 'dark' ? '🌞' : '🌙'}
             </button>
@@ -86,7 +86,7 @@ export default function Nav() {
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 rounded hover:bg-gray-100 dark:hover:bg-zinc-800 transition"
+              className="p-2 rounded hover:bg-gray-100  transition"
               aria-label="Menü öffnen"
             >
               {menuOpen ? '✖' : '☰'}
@@ -97,7 +97,7 @@ export default function Nav() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white/95 dark:bg-zinc-900/95 z-40 flex flex-col items-center justify-center space-y-6 text-lg font-medium md:hidden">
+        <div className="fixed top-0 left-0 w-full h-full bg-white/95  z-40 flex flex-col items-center justify-center space-y-6 text-lg font-medium md:hidden">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -110,7 +110,7 @@ export default function Nav() {
           <Link href="/#contact" onClick={() => setMenuOpen(false)}>
             <Button variant="cyan">Jetzt beraten lassen</Button>
           </Link>
-          <button
+          {/* <button
             onClick={() => {
               setTheme(theme === 'dark' ? 'light' : 'dark');
               setMenuOpen(false);
@@ -118,7 +118,7 @@ export default function Nav() {
             className="mt-4 p-2 border rounded hover:bg-gray-100 transition"
           >
             {theme === 'dark' ? '🌞 Hell' : '🌙 Dunkel'}
-          </button>
+          </button> */}
         </div>
       )}
     </>

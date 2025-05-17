@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from 'next-themes';
+// import { ThemeProvider } from 'next-themes';
 import Nav from '@/components/Nav'; // ✅ hier hinzufügen
 import Footer from '@/components/Footer'; // ✅ hier hinzufügen
 
@@ -49,17 +49,17 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body suppressHydrationWarning>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={true}
-        >
-          <div className="min-h-screen antialiased font-sans bg-background text-foreground">
-            <Nav /> {/* ✅ global sichtbar */}
-            {children}
-            <Footer /> {/* ✅ global sichtbar */}
-          </div>
-        </ThemeProvider>
+        > */}
+        <div className="min-h-screen antialiased font-sans bg-background text-foreground">
+          <Nav /> {/* ✅ global sichtbar */}
+          {children}
+          <Footer /> {/* ✅ global sichtbar */}
+        </div>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
