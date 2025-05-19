@@ -18,22 +18,22 @@ interface Project {
   technologies: string[];
   industry?: string;
 }
-type Props = {
-  params: {
-    slug: string;
-  };
-};
 
-export default async function ProjectDetailPage({ params }: Props) {
+export default async function ProjectDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
   const file = await fs.readFile(
     path.join(process.cwd(), 'data/projects.json'),
     'utf-8'
   );
   const projects: Project[] = JSON.parse(file);
 
-  const slug = decodeURIComponent(`${params?.slug ?? ''}`);
-
-  const project = projects.find((p) => p.slug === slug);
+  const decodedSlug = decodeURIComponent(slug);
+  const project = projects.find((p) => p.slug === decodedSlug);
   if (!project) return notFound();
 
   const otherProjects = shuffle(projects.filter((p) => p.slug !== slug));
