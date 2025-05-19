@@ -18,12 +18,13 @@ interface Project {
   technologies: string[];
   industry?: string;
 }
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 
-export default async function ProjectDetailPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function ProjectDetailPage({ params }: Props) {
   const file = await fs.readFile(
     path.join(process.cwd(), 'data/projects.json'),
     'utf-8'
