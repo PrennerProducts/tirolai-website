@@ -7,7 +7,7 @@ export default function ReferencesPage() {
   return (
     <main className="py-20 px-6">
       {/* Überschrift & Einleitung */}
-      <h1 className="text-4xl font-bold text-center mb-4">
+      <h1 className="text-4xl font-bold text-center m-4">
         Unsere Referenzprojekte
       </h1>
       <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">

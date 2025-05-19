@@ -84,32 +84,27 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Kunden-Logos */}
-      <div className="mt-20 bg-white p-3">
-        <h3 className="text-xl font-semibold text-center mb-6">
+      <div className="mt-20 bg-white p-4">
+        <h3 className="text-xl font-semibold text-center mb-6 text-black">
           Vertrauensvolle Partnerschaften
         </h3>
 
-        <div className="overflow-hidden w-full">
-          <div
-            ref={trackRef}
-            className="flex gap-12 animate-none px-6"
-            style={{
-              whiteSpace: 'nowrap',
-              minWidth: '100%',
-              scrollBehavior: 'auto',
-              overflowX: 'auto',
-              scrollbarWidth: 'none',
-            }}
-          >
-            {/* Logos doppelt für Endlos-Effekt */}
+        <div className="relative overflow-hidden w-full">
+          <div className="flex w-[200%] animate-marquee">
+            {/* Doppelte Logos für Endlosschleife */}
             {[...customerLogos, ...customerLogos].map((logo, i) => (
-              <div key={i} className="flex-shrink-0 w-40 h-20 relative">
-                <Image
-                  src={logo}
-                  alt={`Kundenlogo ${i}`}
-                  fill
-                  className="object-contain"
-                />
+              <div
+                key={i}
+                className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={logo}
+                    alt={`Kundenlogo ${i}`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
             ))}
           </div>

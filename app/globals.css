@@ -62,3 +62,12 @@ html {
 [data-state='closed'].animate-fadeOut {
   animation: fadeOut 0.2s ease-in forwards;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

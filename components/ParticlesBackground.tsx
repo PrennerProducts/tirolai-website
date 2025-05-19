@@ -37,8 +37,8 @@ export default function ParticlesBackground() {
   const options: ISourceOptions = useMemo(
     () => ({
       fullScreen: {
-        enable: false,
-        zIndex: -1, // <- Damit liegt der Partikel-Canvas unter allem anderen
+        enable: true,
+        zIndex: -10, // liegt ganz unten
       },
       // background: {
       //   // color: '#18ffff', // optional
@@ -111,7 +111,7 @@ export default function ParticlesBackground() {
   if (init) {
     return (
       <Particles
-        id="tsparticles"
+        id="tsparticles-background" // NEUE ID!
         particlesLoaded={particlesLoaded}
         options={options}
       />
