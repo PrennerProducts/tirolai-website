@@ -14,9 +14,10 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Menu, X } from 'lucide-react';
 import { useRef } from 'react';
+import useIsScrolled from '@/hooks/useIsScrolled';
+import { usePathname } from 'next/navigation';
 
 export default function Nav() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -24,6 +25,13 @@ export default function Nav() {
 
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLDivElement | null>(null);
+
+  // scroll listener
+  const pathname = usePathname();
+  const isHomepage = pathname === '/';
+
+  const isScrolled = useIsScrolled();
+  const showSolidNav = !isHomepage || isScrolled || isMobile || mobileOpen;
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -52,22 +60,11 @@ export default function Nav() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const showSolidNav = isScrolled || isMobile || mobileOpen;
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         showSolidNav
-          ? 'bg-zinc-400 border-b border-white/10 shadow-xl backdrop-blur-md'
+          ? 'bg-zinc-800 border-b border-white/10 shadow-xl backdrop-blur-md z-50'
           : 'bg-transparent border-transparent shadow-none'
       }`}
     >
@@ -176,11 +173,6 @@ export default function Nav() {
             onClick={() => {
               const willOpen = !mobileOpen;
               setMobileOpen(willOpen);
-              if (willOpen) {
-                setIsScrolled(true);
-              } else if (window.scrollY <= 50) {
-                setIsScrolled(false);
-              }
             }}
             className="text-black focus:outline-none"
             aria-label="Toggle mobile menu"

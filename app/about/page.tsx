@@ -94,7 +94,7 @@ export default function AboutPage() {
             IoT Systems Architect
           </p>
           <p className="text-sm text-muted-foreground">
-            Spezialist für Embedded Devices, Security und Sensorik.
+            Spezialist für LSTM, Superviced und Unsuperviced Leraning.
           </p>
         </div>
       </div>

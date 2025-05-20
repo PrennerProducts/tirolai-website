@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Kunden-Logos */}
-      <div className="mt-20 bg-white p-4">
+      <div className="mt-20 bg-white p-4 w-fit mx-auto rounded-2xl">
         <h3 className="text-xl font-semibold text-center mb-6 text-black">
           Vertrauensvolle Partnerschaften
         </h3>

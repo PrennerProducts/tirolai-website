@@ -22,7 +22,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative z-50 py-16 bg-zinc-400 text-center px-6 overflow-hidden"
+      className="relative z-10 py-16 bg-zinc-400 text-center px-6 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-12">
@@ -39,7 +39,7 @@ export default function ServicesSection() {
             icon={<Brain className="w-8 h-8 text-cyan-600" />}
             title="Künstliche Intelligenz"
             text="Maßgeschneiderte AI-Lösungen mit Praxisbezug."
-            detailedText="Unser Team bringt fundiertes Wissen aus dem Masterstudium Artificial Intelligence und praktischer Forschung mit. Wir konzipieren und entwickeln individuelle Machine-Learning-Modelle, von Vorhersagesystemen über Computer Vision bis zu Reinforcement Learning – inklusive Deployment & Monitoring."
+            detailedText="Unser Team vereint tiefgehende Expertise aus dem Bereich Artificial Intelligence mit praktischer Forschungserfahrung. Wir entwickeln maßgeschneiderte Machine-Learning-Lösungen – von Vorhersagemodellen über Computer Vision bis hin zu Reinforcement Learning – inklusive Deployment und Monitoring."
           />
           <ServiceCard
             icon={<SatelliteDish className="w-8 h-8 text-cyan-600" />}
