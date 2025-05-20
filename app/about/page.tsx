@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-20 text-foreground">
+    <main className="max-w-4xl mx-auto mt-6 px-6 py-20 text-foreground">
       <h1 className="text-4xl font-bold mb-8 text-center">Über uns</h1>
 
       <p className="text-lg mb-6">
@@ -49,13 +49,15 @@ export default function AboutPage() {
             height={96}
             className="rounded-full mb-4 object-cover"
           />
-          <h3 className="text-xl font-semibold mb-1">Martin Seppi</h3>
-          <p className="text-sm text-muted-foreground mb-1">
+          <h3 className="text-xl font-semibold mb-1">Listiger Fuchs</h3>
+          <p className="text-sm font-medium text-muted-foreground mb-1">
             Machine Learning Engineer
           </p>
           <p className="text-sm text-muted-foreground">
-            BSc Software Engineering & MSc Artificial Intelligence. Fokus auf
-            Interfaces, AI Agents und intelligente Weblösungen.
+            BSc Software Engineering & MSc Artificial Intelligence.
+            Spezialisiert auf Machine Learning, Reinforcement Learning und
+            datengetriebene Systeme. Fokus auf Modellentwicklung, Evaluation und
+            Dateninfrastruktur.
           </p>
         </div>
 
@@ -67,14 +69,15 @@ export default function AboutPage() {
             height={96}
             className="rounded-full mb-4 object-cover"
           />
-          <h3 className="text-xl font-semibold mb-1">Lukas Prenner</h3>
-          <p className="text-sm text-muted-foreground mb-1">
+          <h3 className="text-xl font-semibold mb-1">Falscher Hase</h3>
+          <p className="text-sm font-medium text-muted-foreground mb-1">
             AI Engineer & UX Developer
           </p>
           <p className="text-sm text-muted-foreground">
             BSc Software Engineering & MSc Artificial Intelligence. Bringt
-            Erfahrung in Reinforcement Learning und skalierbaren
-            Backend-Systemen mit.
+            Erfahrung in Webentwicklung (Frontend & Backend), UI/UX, DevOps
+            sowie der Integration von KI-Systemen in skalierbare Webanwendungen
+            mit.
           </p>
         </div>
 
@@ -86,12 +89,11 @@ export default function AboutPage() {
             height={96}
             className="rounded-full mb-4 object-cover"
           />
-          <h3 className="text-xl font-semibold mb-1">Dr. Tech</h3>
-          <p className="text-sm text-muted-foreground mb-1">
+          <h3 className="text-xl font-semibold mb-1">Sepp Hochstapler</h3>
+          <p className="text-sm font-medium text-muted-foreground mb-1">
             IoT Systems Architect
           </p>
           <p className="text-sm text-muted-foreground">
-            BSc & MSc Mechatronik, PhD-Forschung im Bereich Internet of Things.
             Spezialist für Embedded Devices, Security und Sensorik.
           </p>
         </div>

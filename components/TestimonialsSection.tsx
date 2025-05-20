@@ -2,7 +2,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
 
 const testimonials = [
   {
@@ -34,33 +33,7 @@ const customerLogos = [
 ];
 
 export default function TestimonialsSection() {
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  // Auto-scroll Effekt
-  useEffect(() => {
-    let animationFrame: number;
-    let lastTimestamp = 0;
-
-    const scrollSpeed = 0.5;
-
-    const animate = (timestamp: number) => {
-      if (trackRef.current) {
-        if (lastTimestamp) {
-          const delta = timestamp - lastTimestamp;
-          trackRef.current.scrollLeft += scrollSpeed * delta;
-          // Loop-Ende zurücksetzen
-          if (trackRef.current.scrollLeft >= trackRef.current.scrollWidth / 2) {
-            trackRef.current.scrollLeft = 0;
-          }
-        }
-        lastTimestamp = timestamp;
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, []);
+  // const trackRef = useRef<HTMLDivElement>(null);
 
   return (
     <section className="py-24 bg-zinc-800 text-white">
@@ -89,25 +62,20 @@ export default function TestimonialsSection() {
           Vertrauensvolle Partnerschaften
         </h3>
 
-        <div className="relative overflow-hidden w-full">
-          <div className="flex w-[200%] animate-marquee">
-            {/* Doppelte Logos für Endlosschleife */}
-            {[...customerLogos, ...customerLogos].map((logo, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={logo}
-                    alt={`Kundenlogo ${i}`}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center items-center gap-6">
+          {customerLogos.map((logo, i) => (
+            <div
+              key={i}
+              className="w-32 h-16 flex items-center justify-center relative"
+            >
+              <Image
+                src={logo}
+                alt={`Kundenlogo ${i}`}
+                fill
+                className="object-contain"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
