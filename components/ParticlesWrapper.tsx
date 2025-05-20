@@ -17,38 +17,72 @@ export default function ParticlesWrapper() {
     }).then(() => setInit(true));
   }, []);
 
+  // responsive scaling:
+  const [scale, setScale] = useState(0.4);
+  const [particlesCount, setParticlesCount] = useState(400);
+  const [strokeWidth, setStrokeWidth] = useState(1);
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 640) {
+        setScale(0.3); // Smartphone
+        setParticlesCount(300);
+        setStrokeWidth(2);
+      } else if (width < 1024) {
+        setScale(0.25); // Tablet
+        setParticlesCount(250);
+        setStrokeWidth(0.4);
+      } else {
+        setScale(0.4); // Desktop
+        setParticlesCount(800);
+        setStrokeWidth(0.4);
+      }
+    };
+
+    handleResize(); // initial call
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const options: ISourceOptions = {
     autoPlay: true,
+    pauseOnBlur: false,
+
     fullScreen: {
       enable: false, // wichtig: nicht fullscreen!
     },
+    // background: {
+    //   color: '#000000',
+    //   image: '',
+    //   position: '50% 50%',
+    //   repeat: 'no-repeat',
+    //   size: 'cover',
+    // },
+
     detectRetina: true,
-    fpsLimit: 120,
+    fpsLimit: 10,
     interactivity: {
-      detectsOn: 'window',
+      // detectsOn: 'window',
       events: {
         onHover: {
           enable: true,
           mode: 'bubble',
-          parallax: {
-            enable: false,
-            force: 2,
-            smooth: 10,
-          },
         },
-        resize: { enable: true, delay: 0.5 },
+        resize: { enable: true },
       },
       modes: {
         bubble: {
-          distance: 40,
+          distance: 0,
           duration: 2,
-          opacity: 0.8,
-          size: 6,
+          opacity: 1,
+          size: 7,
+          speed: 3,
         },
-        grab: {
-          distance: 400,
-          links: { opacity: 1 },
-        },
+        // grab: {
+        //   distance: 400,
+        //   links: { opacity: 1 },
+        // },
       },
     },
     particles: {
@@ -66,23 +100,22 @@ export default function ParticlesWrapper() {
       },
       links: {
         enable: true,
-        color: { value: 'random' },
-        distance: 30,
-        opacity: 1,
+        color: 'random',
+        distance: 20,
+        opacity: 0.7,
         width: 1,
       },
       move: {
         enable: true,
         speed: 1,
-        outModes: {
-          default: 'bounce',
-        },
+        direction: 'none',
+        outModes: 'bounce',
       },
       number: {
-        value: 200,
+        value: particlesCount,
       },
       opacity: {
-        value: { min: 0.05, max: 0.4 },
+        value: { min: 0.3, max: 0.8 },
         animation: {
           enable: true,
           speed: 2,
@@ -93,22 +126,22 @@ export default function ParticlesWrapper() {
         type: 'circle',
       },
       size: {
-        value: 3,
+        value: 1,
       },
     },
     polygon: {
       enable: true,
       type: 'inline',
       move: {
-        radius: 8,
+        radius: 5,
         type: 'path',
       },
 
-      url: '/Logo.svg',
-      scale: 0.4,
+      url: '/thinmountain.svg',
+      scale: scale,
       position: {
         x: 0,
-        y: -25,
+        y: -5,
       },
       inline: {
         arrangement: 'equidistant',
@@ -116,28 +149,16 @@ export default function ParticlesWrapper() {
       draw: {
         enable: true,
         stroke: {
-          color: { value: '#000000' },
-          width: 4,
-          opacity: 1,
+          color: '#000000',
+          width: strokeWidth,
+          opacity: 0.3,
         },
       },
     },
   };
-
-  return (
-    <>
-      {init && (
-        <Particles
-          id="tsparticles-logo" // NEUE ID!
-          options={options}
-          style={{
-            width: '100%',
-            height: '100%',
-            background: 'transparent', // Canvas selbst durchsichtig
-            pointerEvents: 'none', // Kein Hover-Blocking auf dem Logo
-          }}
-        />
-      )}
-    </>
-  );
+  return init ? (
+    <div className="relative w-full max-w-[1064.5px] aspect-[1064/693] z-10">
+      <Particles id="logo-particles" options={options} />
+    </div>
+  ) : null;
 }

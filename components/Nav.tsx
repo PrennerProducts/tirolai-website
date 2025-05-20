@@ -20,7 +20,23 @@ export default function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-zinc-400 border-b border-white/10 shadow-xl">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <Link
+        <div className="flex items-center space-x-2">
+          <Image
+            src="/mountain.png"
+            width={80}
+            height={80}
+            alt="Picture of the author"
+          />
+          <div className="pt-2">
+            <Image
+              src="/logofont.png"
+              width={150}
+              height={150}
+              alt="Picture of the author"
+            />
+          </div>
+        </div>
+        {/* <Link
           href="/"
           className="group text-3xl sm:text-4xl font-bold tracking-tight flex items-center space-x-1"
         >
@@ -31,7 +47,7 @@ export default function Nav() {
             AI
           </span>
           <span className="ml-1 w-1 h-5 bg-cyan-400 animate-pulse rounded-sm" />
-        </Link>
+        </Link> */}
 
         {/* Navigation Menu (shadcn/ui) */}
         <NavigationMenu className="hidden md:block">
