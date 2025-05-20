@@ -25,11 +25,10 @@ const testimonials = [
 ];
 
 const customerLogos = [
-  '/images/customerlogos/ergophysion.svg',
-  '/images/customerlogos/mci.png',
-  '/images/customerlogos/jku.svg',
-  '/images/customerlogos/trento.jpg',
-  '/images/customerlogos/lukas.png',
+  { src: '/images/customerlogos/ergophysion.svg', width: 120, height: 60 },
+  { src: '/images/customerlogos/mci.png', width: 100, height: 50 },
+  { src: '/images/customerlogos/jku.svg', width: 80, height: 60 },
+  { src: '/images/customerlogos/lukas.png', width: 50, height: 35 },
 ];
 
 export default function TestimonialsSection() {
@@ -62,16 +61,14 @@ export default function TestimonialsSection() {
           Vertrauensvolle Partnerschaften
         </h3>
 
-        <div className="flex flex-wrap justify-center items-center gap-6">
+        <div className="flex flex-wrap justify-center items-center gap-10">
           {customerLogos.map((logo, i) => (
-            <div
-              key={i}
-              className="w-32 h-16 flex items-center justify-center relative"
-            >
+            <div key={i} className="flex items-center justify-center">
               <Image
-                src={logo}
+                src={logo.src}
                 alt={`Kundenlogo ${i}`}
-                fill
+                width={logo.width}
+                height={logo.height}
                 className="object-contain"
               />
             </div>

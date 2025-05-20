@@ -55,9 +55,9 @@ export default function RootLayout({
           enableSystem={true}
         > */}
         <div className="min-h-screen antialiased font-sans bg-background text-foreground">
-          <Nav /> {/* ✅ global sichtbar */}
+          <Nav />
           {children}
-          <Footer /> {/* ✅ global sichtbar */}
+          <Footer />
         </div>
         {/* </ThemeProvider> */}
       </body>
