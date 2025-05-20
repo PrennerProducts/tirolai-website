@@ -16,7 +16,7 @@ export default function Hero() {
 
         {/* Inhalt */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 py-20 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
             {/* Linke Hälfte: Logo */}
             <div className="flex justify-center items-center min-h-[400px]">
               <ParticlesWrapper />

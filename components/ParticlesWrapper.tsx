@@ -26,17 +26,17 @@ export default function ParticlesWrapper() {
       const width = window.innerWidth;
 
       if (width < 640) {
-        setScale(0.3); // Smartphone
-        setParticlesCount(300);
-        setStrokeWidth(2);
+        setScale(0.31); // Smartphone
+        setParticlesCount(200);
+        setStrokeWidth(6);
       } else if (width < 1024) {
         setScale(0.25); // Tablet
-        setParticlesCount(250);
+        setParticlesCount(200);
         setStrokeWidth(0.4);
       } else {
-        setScale(0.4); // Desktop
-        setParticlesCount(800);
-        setStrokeWidth(0.4);
+        setScale(0.39); // Desktop
+        setParticlesCount(200);
+        setStrokeWidth(8);
       }
     };
 
@@ -73,7 +73,7 @@ export default function ParticlesWrapper() {
       },
       modes: {
         bubble: {
-          distance: 0,
+          distance: 2,
           duration: 2,
           opacity: 1,
           size: 7,
@@ -101,9 +101,9 @@ export default function ParticlesWrapper() {
       links: {
         enable: true,
         color: 'random',
-        distance: 20,
+        distance: 10,
         opacity: 0.7,
-        width: 1,
+        width: 10,
       },
       move: {
         enable: true,
@@ -115,7 +115,7 @@ export default function ParticlesWrapper() {
         value: particlesCount,
       },
       opacity: {
-        value: { min: 0.3, max: 0.8 },
+        value: { min: 0.4, max: 1 },
         animation: {
           enable: true,
           speed: 2,
@@ -126,7 +126,7 @@ export default function ParticlesWrapper() {
         type: 'circle',
       },
       size: {
-        value: 1,
+        value: 2,
       },
     },
     polygon: {
@@ -149,9 +149,9 @@ export default function ParticlesWrapper() {
       draw: {
         enable: true,
         stroke: {
-          color: '#000000',
+          color: '#000',
           width: strokeWidth,
-          opacity: 0.3,
+          opacity: 1,
         },
       },
     },
