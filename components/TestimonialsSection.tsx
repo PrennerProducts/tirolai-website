@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import ParticlesBackground from './ParticlesBackground';
 
 const testimonials = [
   {
@@ -28,7 +29,7 @@ const customerLogos = [
   { src: '/images/customerlogos/ergophysion.svg', width: 120, height: 60 },
   { src: '/images/customerlogos/mci.png', width: 100, height: 50 },
   { src: '/images/customerlogos/jku.svg', width: 80, height: 60 },
-  { src: '/images/customerlogos/lukas.png', width: 50, height: 35 },
+  { src: '/images/customerlogos/lukas.png', width: 70, height: 35 },
 ];
 
 export default function TestimonialsSection() {

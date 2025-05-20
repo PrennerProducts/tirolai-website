@@ -20,7 +20,10 @@ import {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-16 bg-zinc-800 text-center px-6">
+    <section
+      id="services"
+      className="relative z-50 py-16 bg-zinc-400 text-center px-6 overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-12">
           Unsere Leistungen

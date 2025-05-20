@@ -4,24 +4,31 @@ import ParticlesBackground from './ParticlesBackground';
 import { Button } from '@/components/ui/button';
 // import ParticlesWrapper from './ParticlesWrapper';
 import PolygonMaskParticles from './ParticlePoligonMask';
+import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
 
 export default function Hero() {
+  const isMobileOrTablet = useIsMobileOrTablet(); // max-width: 1024px
+
   return (
     <main>
-      <section className="relative isolate overflow-hidden min-h-screen flex items-center">
-        {/* Partikel-Hintergrund */}
-        <div className="absolute inset-0 z-[-10]">
+      <section className="relative isolate overflow-hidden min-h-screen flex items-center  bg-zinc-800">
+        <div className="absolute inset-0 z-[50]">
           <ParticlesBackground />
         </div>
-        <div className="absolute inset-0 z-[-20] bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent" />
+        {/* Partikel-Hintergrund */}
+        {!isMobileOrTablet && (
+          <div className="absolute inset-0 z-[-10]">
+            <PolygonMaskParticles />
+          </div>
+        )}
 
         {/* Inhalt */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 py-20 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-50">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
             {/* Linke Hälfte: Logo */}
             <div className="flex justify-center items-center min-h-[400px]">
               {/* <ParticlesWrapper /> */}
-              <PolygonMaskParticles />
+              {/* <PolygonMaskParticles /> */}
             </div>
 
             {/* Rechte Hälfte: Text */}
@@ -30,7 +37,7 @@ export default function Hero() {
                 Digitale Intelligenz
                 <br className="hidden sm:block" /> aus Tirol.
               </h1>
-              <p className="mt-6 text-lg leading-8 text-black/80 max-w-xl">
+              <p className="mt-6 text-lg leading-8 text-white max-w-xl">
                 Wir entwickeln smarte Web- & KI-Lösungen für Unternehmen, die
                 vorausdenken.
               </p>

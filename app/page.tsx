@@ -18,7 +18,7 @@ export default function Home() {
   if (!mounted) return null;
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-gray-50 text-foreground">
       <Hero />
       <ServicesSection />
       {/* Slider statt Grid */}

@@ -74,10 +74,10 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 group">
-          <Image src="/mountain.png" width={80} height={80} alt="Logo" />
+          <Image src="/mountainWhite.png" width={80} height={80} alt="Logo" />
           <div className="pt-2">
             <Image
-              src="/logofont.png"
+              src="/logofontWhite.png"
               width={150}
               height={150}
               alt="Logo Font"
@@ -86,7 +86,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop-Navigation */}
-        <NavigationMenu className="hidden md:block">
+        <NavigationMenu className="hidden md:block text-white">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Leistungen</NavigationMenuTrigger>

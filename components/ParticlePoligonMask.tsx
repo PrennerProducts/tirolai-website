@@ -54,7 +54,7 @@ export default function PolygonMaskParticles() {
       },
       links: {
         color: 'random',
-        distance: 25,
+        distance: 40,
         enable: true,
         opacity: 1,
         width: 1,
@@ -66,7 +66,7 @@ export default function PolygonMaskParticles() {
         speed: 1,
       },
       number: {
-        value: 200,
+        value: 800,
       },
       opacity: {
         animation: {
@@ -97,18 +97,18 @@ export default function PolygonMaskParticles() {
         radius: 5,
       },
       position: {
-        x: 22,
+        x: 2,
         y: 10,
       },
       inline: {
         arrangement: 'equidistant',
       },
-      scale: 0.3,
+      scale: 1,
       type: 'inline',
       url: 'Logo.svg',
     },
     background: {
-      color: '#0f0f0f',
+      color: '#27272a',
       image: '',
       position: '50% 50%',
       repeat: 'no-repeat',
@@ -117,7 +117,7 @@ export default function PolygonMaskParticles() {
   };
 
   return init ? (
-    <div className="relative w-full max-w-[1064.5px] aspect-[1064/693] z-10">
+    <div className="relative w-full max-w aspect-[1064/693] z-10">
       <Particles id="polygonParticles" options={options} />
     </div>
   ) : null;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-900 text-zinc-300 py-12 px-6">
+    <footer className="relative z-50 bg-zinc-900 text-zinc-300 py-12 px-6">
       <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
         <div>
           <h4 className="text-white font-semibold mb-3">TirolAI</h4>
