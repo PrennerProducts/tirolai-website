@@ -2,7 +2,8 @@
 
 import ParticlesBackground from './ParticlesBackground';
 import { Button } from '@/components/ui/button';
-import ParticlesWrapper from './ParticlesWrapper';
+// import ParticlesWrapper from './ParticlesWrapper';
+import PolygonMaskParticles from './ParticlePoligonMask';
 
 export default function Hero() {
   return (
@@ -16,14 +17,15 @@ export default function Hero() {
 
         {/* Inhalt */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 py-20 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-50">
             {/* Linke Hälfte: Logo */}
             <div className="flex justify-center items-center min-h-[400px]">
-              <ParticlesWrapper />
+              {/* <ParticlesWrapper /> */}
+              <PolygonMaskParticles />
             </div>
 
             {/* Rechte Hälfte: Text */}
-            <div className="text-black text-center md:text-left flex flex-col justify-center">
+            <div className="text-white text-center md:text-left flex flex-col justify-center">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
                 Digitale Intelligenz
                 <br className="hidden sm:block" /> aus Tirol.

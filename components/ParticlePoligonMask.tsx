@@ -18,23 +18,16 @@ export default function PolygonMaskParticles() {
   }, []);
 
   const options: ISourceOptions = {
-    autoPlay: true,
-    fullScreen: { enable: false, zIndex: -10 },
-    detectRetina: true,
-    fpsLimit: 120,
+    fullScreen: {
+      enable: false, // ❗️Damit nicht der ganze Screen belegt wird
+    },
+    pauseOnBlur: false,
     interactivity: {
-      detectsOn: 'window',
       events: {
         onHover: {
           enable: true,
           mode: 'bubble',
-          parallax: {
-            enable: false,
-            force: 2,
-            smooth: 10,
-          },
         },
-        resize: { enable: true, delay: 0.5 },
       },
       modes: {
         bubble: {
@@ -42,59 +35,90 @@ export default function PolygonMaskParticles() {
           duration: 2,
           opacity: 8,
           size: 6,
+          speed: 3,
         },
       },
     },
     particles: {
-      color: { value: '#000000' },
+      color: {
+        value: [
+          '#00FFFF',
+          '#00F5A0',
+          '#FF00FF',
+          '#FF4DFF',
+          '#8A2BE2',
+          '#00BFFF',
+          '#39FF14',
+          '#FF6EC7',
+        ],
+      },
       links: {
+        color: 'random',
+        distance: 25,
         enable: true,
-        color: '#000000',
-        distance: 1,
-        opacity: 0.4,
+        opacity: 1,
         width: 1,
       },
       move: {
+        direction: 'none',
         enable: true,
+        outModes: 'bounce',
         speed: 1,
-        outModes: { default: 'bounce' },
       },
-      number: { value: 500 },
+      number: {
+        value: 200,
+      },
       opacity: {
-        value: { min: 0.05, max: 0.4 },
         animation: {
           enable: true,
           speed: 2,
           sync: false,
         },
+        value: { min: 0.3, max: 0.8 },
       },
-      shape: { type: 'circle' },
-      size: { value: 1 },
+      shape: {
+        type: 'circle',
+      },
+      size: {
+        value: 1,
+      },
     },
     polygon: {
       draw: {
         enable: true,
         stroke: {
-          color: { value: '#000000' },
+          color: '#fff',
+          opacity: 0.2,
           width: 1,
-          opacity: 0.9,
         },
       },
       enable: true,
-      inline: { arrangement: 'equidistant' },
       move: {
-        radius: 10,
-        type: 'path',
+        radius: 5,
       },
-      scale: 0.5,
-      type: 'inline',
-      url: '/Logo.svg',
       position: {
-        x: 50,
-        y: 50,
+        x: 22,
+        y: 10,
       },
+      inline: {
+        arrangement: 'equidistant',
+      },
+      scale: 0.3,
+      type: 'inline',
+      url: 'Logo.svg',
+    },
+    background: {
+      color: '#0f0f0f',
+      image: '',
+      position: '50% 50%',
+      repeat: 'no-repeat',
+      size: 'cover',
     },
   };
 
-  return init ? <Particles id="polygonParticles" options={options} /> : null;
+  return init ? (
+    <div className="relative w-full max-w-[1064.5px] aspect-[1064/693] z-10">
+      <Particles id="polygonParticles" options={options} />
+    </div>
+  ) : null;
 }
