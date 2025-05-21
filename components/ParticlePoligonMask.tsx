@@ -6,9 +6,11 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import { loadPolygonMaskPlugin } from '@tsparticles/plugin-polygon-mask';
 import type { ISourceOptions } from '@tsparticles/engine';
+import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
 
 export default function PolygonMaskParticles() {
   const [init, setInit] = useState(false);
+  const isMobile = useIsMobileOrTablet(); // max-width: 1024px
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -18,9 +20,8 @@ export default function PolygonMaskParticles() {
   }, []);
 
   const options: ISourceOptions = {
-    fullScreen: {
-      enable: false, // ❗️Damit nicht der ganze Screen belegt wird
-    },
+    fullScreen: false,
+    fpsLimit: 120,
     pauseOnBlur: false,
     interactivity: {
       events: {
@@ -54,7 +55,7 @@ export default function PolygonMaskParticles() {
       },
       links: {
         color: 'random',
-        distance: 40,
+        distance: isMobile ? 20 : 30,
         enable: true,
         opacity: 1,
         width: 1,
@@ -66,7 +67,7 @@ export default function PolygonMaskParticles() {
         speed: 1,
       },
       number: {
-        value: 800,
+        value: isMobile ? 130 : 300,
       },
       opacity: {
         animation: {
@@ -97,18 +98,19 @@ export default function PolygonMaskParticles() {
         radius: 5,
       },
       position: {
-        x: 2,
-        y: 10,
+        x: isMobile ? 50 : 30,
+        y: isMobile ? 60 : 50,
       },
       inline: {
         arrangement: 'equidistant',
       },
-      scale: 1,
+      scale: isMobile ? 0.5 : 1,
       type: 'inline',
-      url: 'Logo.svg',
+      url: 'Mountain.svg',
     },
     background: {
       color: '#27272a',
+      //color: '#fff',
       image: '',
       position: '50% 50%',
       repeat: 'no-repeat',

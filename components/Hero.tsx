@@ -4,10 +4,10 @@ import ParticlesBackground from './ParticlesBackground';
 import { Button } from '@/components/ui/button';
 // import ParticlesWrapper from './ParticlesWrapper';
 import PolygonMaskParticles from './ParticlePoligonMask';
-import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
+//import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
 
 export default function Hero() {
-  const isMobileOrTablet = useIsMobileOrTablet(); // max-width: 1024px
+  //const isMobileOrTablet = false; // useIsMobileOrTablet(); // max-width: 1024px
 
   return (
     <main>
@@ -16,12 +16,18 @@ export default function Hero() {
           <ParticlesBackground />
         </div>
         {/* Partikel-Hintergrund */}
-        {!isMobileOrTablet && (
-          <div className="absolute inset-0 z-[-10]">
-            <PolygonMaskParticles />
-          </div>
-        )}
 
+        <div
+          className="
+  absolute 
+  top-10 left-0 
+  sm:top-0 sm:left-[-50px] 
+  w-full h-full z-[-10] 
+  flex justify-center
+"
+        >
+          <PolygonMaskParticles />
+        </div>
         {/* Inhalt */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 py-20 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
