@@ -174,7 +174,7 @@ export default function Nav() {
               const willOpen = !mobileOpen;
               setMobileOpen(willOpen);
             }}
-            className="text-black focus:outline-none"
+            className="text-white focus:outline-none"
             aria-label="Toggle mobile menu"
           >
             {mobileOpen ? <X size={30} /> : <Menu size={30} />}

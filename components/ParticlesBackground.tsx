@@ -10,10 +10,12 @@ import {
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
+  const isMobile = useIsMobileOrTablet(); // max-width: 1024px
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function ParticlesBackground() {
       //   // color: '#18ffff', // optional
       // },
 
-      fpsLimit: 120,
+      fpsLimit: isMobile ? 60 : 100,
       interactivity: {
         events: {
           onClick: {
@@ -57,7 +59,7 @@ export default function ParticlesBackground() {
         },
         modes: {
           push: {
-            quantity: 5,
+            quantity: isMobile ? 2 : 5,
           },
           repulse: {
             distance: 100,
@@ -90,7 +92,7 @@ export default function ParticlesBackground() {
           density: {
             enable: true,
           },
-          value: 60,
+          value: isMobile ? 10 : 60,
         },
         opacity: {
           value: 0.5,
@@ -104,7 +106,7 @@ export default function ParticlesBackground() {
       },
       detectRetina: true,
     }),
-    []
+    [isMobile]
   );
 
   if (init) {

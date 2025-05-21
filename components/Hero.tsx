@@ -38,7 +38,7 @@ export default function Hero() {
             </div>
 
             {/* Rechte Hälfte: Text */}
-            <div className="text-white text-center md:text-left flex flex-col justify-center">
+            <div className="text-white text-center md:text-left mt-[-250px] sm:mt-0 flex flex-col justify-center">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
                 Digitale Intelligenz
                 <br className="hidden sm:block" /> aus Tirol.

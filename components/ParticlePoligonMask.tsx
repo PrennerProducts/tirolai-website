@@ -21,7 +21,7 @@ export default function PolygonMaskParticles() {
 
   const options: ISourceOptions = {
     fullScreen: false,
-    fpsLimit: 120,
+    fpsLimit: isMobile ? 60 : 100,
     pauseOnBlur: false,
     interactivity: {
       events: {
