@@ -44,12 +44,12 @@ export default function Footer() {
           <h5 className="text-white font-medium mb-2">Unternehmen</h5>
           <ul className="space-y-1">
             <li>
-              <Link href="#about" className="hover:underline">
+              <Link href="/about" className="hover:underline">
                 Über uns
               </Link>
             </li>
             <li>
-              <Link href="#contact" className="hover:underline">
+              <Link href="/contact" className="hover:underline">
                 Kontakt
               </Link>
             </li>

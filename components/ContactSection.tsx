@@ -97,7 +97,7 @@ export default function ContactSection() {
             <Button
               type="submit"
               variant="cyan"
-              className="w-full text-white font-semibold"
+              className="w-full text-black font-semibold"
             >
               Nachricht senden
             </Button>

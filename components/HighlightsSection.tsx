@@ -20,7 +20,7 @@ export default function HighlightsSection() {
           <Highlight
             icon={<Mountain className="w-8 h-8 text-cyan-600" />}
             title="Regional verwurzelt"
-            text="Wir sind in Tirol zu Hause – und wissen, wie wichtig Vertrauen, persönliche Kommunikation und regionale Nähe im digitalen Umfeld sind. Das macht Zusammenarbeit effizienter und ehrlicher."
+            text="Zwischen Nord- und Südtirol verwurzelt – wir verbinden alpine Bodenständigkeit mit digitaler Innovationskraft. Regional denken, global skalieren."
           />
           <Highlight
             icon={<Brain className="w-8 h-8 text-cyan-600" />}

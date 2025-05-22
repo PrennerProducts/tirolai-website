@@ -6,22 +6,22 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    name: 'Anna M., PhysioVital Innsbruck',
+    name: 'Martin Feuerstein, Ergophysion',
     quote:
-      'Dank TirolAI konnten wir unsere Terminkoordination komplett automatisieren. Unsere Patient:innen lieben die neue Lösung!',
-    role: 'Praxisleitung',
+      'Mit TirolAI konnten wir unsere Vision einer KI-gestützten Bewegungsanalyse erstmals realisieren. Die Zusammenarbeit war hochprofessionell, lösungsorientiert – und das Ergebnis begeistert sowohl unser Team als auch unsere Patient:innen.',
+    role: 'Gründer & Geschäftsführer',
   },
   {
-    name: 'Markus L., Fechtverband Österreich',
+    name: 'Martin Feuerstein, Ergophysion',
     quote:
-      'Die Analyseplattform von TirolAI liefert uns Auswertungen, die wir vorher nur mit Excel mühsam hinbekommen haben.',
-    role: 'Sportdaten-Analyst',
+      'Mit TirolAI konnten wir unsere Vision einer KI-gestützten Bewegungsanalyse erstmals realisieren. Die Zusammenarbeit war hochprofessionell, lösungsorientiert – und das Ergebnis begeistert sowohl unser Team als auch unsere Patient:innen.',
+    role: 'Gründer & Geschäftsführer',
   },
   {
-    name: 'Laura K., Salon Kitzstyle',
+    name: 'Martin Feuerstein, Ergophysion',
     quote:
-      'Unser WhatsApp-Terminbot ist der Wahnsinn! Endlich keine Anrufe mehr während dem Färben – 100% Empfehlung!',
-    role: 'Inhaberin',
+      'Mit TirolAI konnten wir unsere Vision einer KI-gestützten Bewegungsanalyse erstmals realisieren. Die Zusammenarbeit war hochprofessionell, lösungsorientiert – und das Ergebnis begeistert sowohl unser Team als auch unsere Patient:innen.',
+    role: 'Gründer & Geschäftsführer',
   },
 ];
 

@@ -1,7 +1,7 @@
 // app/about/page.tsx
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -10,9 +10,9 @@ export default function AboutPage() {
 
       <p className="text-lg mb-6">
         Willkommen bei <strong>TirolAI</strong> – wo Ideen zu smarten,
-        skalierbaren Lösungen werden. Wir sind ein junges, ambitioniertes
-        Entwicklerteam aus Tirol mit einem klaren Ziel: die digitale Zukunft
-        mitgestalten – effizient, ethisch und innovativ.
+        skalierbaren Lösungen werden. Unser Team verbindet Perspektiven aus
+        Nord- und Südtirol und arbeitet grenzüberschreitend daran, die digitale
+        Zukunft nachhaltig mitzugestalten – effizient, ethisch und innovativ.
       </p>
 
       <p className="text-lg mb-6">
@@ -42,45 +42,47 @@ export default function AboutPage() {
       <h2 className="text-2xl font-semibold mb-4">Unser Team</h2>
       <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-          <Image
+          {/* <Image
             src="/images/dev1.jpg"
             alt="Martin Seppi"
             width={96}
             height={96}
             className="rounded-full mb-4 object-cover"
-          />
-          <h3 className="text-xl font-semibold mb-1">Listiger Fuchs</h3>
+          /> */}
+          <h3 className="text-xl font-semibold mb-1">Martin Seppi</h3>
           <p className="text-sm font-medium text-muted-foreground mb-1">
             Machine Learning Engineer
           </p>
           <p className="text-sm text-muted-foreground">
-            BSc Software Engineering & MSc Artificial Intelligence.
-            Spezialisiert auf Machine Learning, Reinforcement Learning und
-            datengetriebene Systeme. Fokus auf Modellentwicklung, Evaluation und
-            Dateninfrastruktur.
+            BSc in Software Engineering, derzeit im MSc-Studium Artificial
+            Intelligence. Spezialisiert auf Machine Learning, Reinforcement
+            Learning und datengetriebene Systeme – mit Fokus auf
+            Modellentwicklung, Evaluation und Dateninfrastruktur.
           </p>
         </div>
 
         <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-          <Image
-            src="/images/dev2.jpg"
+          {/* <Image
+            src="/images/lukas.png"
             alt="Lukas Prenner"
-            width={96}
-            height={96}
+            width={200}
+            height={200}
             className="rounded-full mb-4 object-cover"
-          />
-          <h3 className="text-xl font-semibold mb-1">Falscher Hase</h3>
+          /> */}
+          <h3 className="text-xl font-semibold mb-1">Lukas Prenner</h3>
           <p className="text-sm font-medium text-muted-foreground mb-1">
             AI Engineer & UX Developer
           </p>
           <p className="text-sm text-muted-foreground">
-            BSc Software Engineering & MSc Artificial Intelligence. Bringt
-            Erfahrung in Webentwicklung (Frontend & Backend), UI/UX, DevOps
-            sowie der Integration von KI-Systemen in skalierbare Webanwendungen
-            mit.
+            <p className="text-sm text-muted-foreground">
+              BSc in Software Engineering, derzeit MSc-Studium in Artificial
+              Intelligence. Bringt Erfahrung in Webentwicklung (Frontend &
+              Backend), UI/UX, DevOps sowie der Integration von KI-Systemen in
+              skalierbare Webanwendungen mit.
+            </p>
           </p>
         </div>
-
+        {/* 
         <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center text-center">
           <Image
             src="/images/dev3.jpg"
@@ -94,9 +96,9 @@ export default function AboutPage() {
             IoT Systems Architect
           </p>
           <p className="text-sm text-muted-foreground">
-            Spezialist für LSTM, Superviced und Unsuperviced Leraning.
+            Spezialist für LSTM, Supervised und Unsupervised Leraning.
           </p>
-        </div>
+        </div> */}
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Was uns auszeichnet</h2>
@@ -110,11 +112,12 @@ export default function AboutPage() {
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Unsere Mission</h2>
       <p className="text-base text-muted-foreground mb-6">
-        Wir wollen Tirol zu einem Ort machen, an dem moderne Technologie nicht
-        hinterherhinkt, sondern vorausgeht. TirolAI ist die Schnittstelle
-        zwischen kreativen Ideen und technologischer Umsetzung. Egal ob
-        Pilotprojekt oder Fullstack-System: Wir begleiten euch vom ersten
-        Konzept bis zur finalen Implementierung.
+        Wir wollen Tirol – von Nord bis Süd – zu einem Ort machen, an dem
+        moderne Technologie nicht hinterherhinkt, sondern vorausgeht. TirolAI
+        ist die Schnittstelle zwischen kreativen Ideen und technologischer
+        Umsetzung. Egal ob Pilotprojekt oder Fullstack-System: Wir begleiten
+        euch vom ersten Konzept bis zur finalen Implementierung – praxisnah,
+        grenzüberschreitend und zukunftssicher.
       </p>
 
       <div className="mt-10 text-center">
