@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <main>
       <section className="relative isolate overflow-hidden min-h-screen flex items-center  bg-zinc-800">
-        <div className="absolute inset-0 z-[50]">
+        <div className="absolute inset-0 z-10">
           <ParticlesBackground />
         </div>
         {/* Partikel-Hintergrund */}
@@ -38,7 +38,7 @@ export default function Hero() {
             </div>
 
             {/* Rechte Hälfte: Text */}
-            <div className="text-white text-center md:text-left mt-[-250px] sm:mt-0 flex flex-col justify-center">
+            <div className="text-white text-center md:text-left mt-[-250px] sm:mt-0 flex flex-col justify-center z-20">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
                 Digitale Intelligenz
                 <br className="hidden sm:block" /> aus Tirol.
@@ -52,7 +52,7 @@ export default function Hero() {
                   <a href="#contact">Jetzt beraten lassen</a>
                 </Button>
                 <Button variant="ghost" asChild>
-                  <a href="#about">Mehr erfahren →</a>
+                  <a href="#services">Mehr erfahren →</a>
                 </Button>
               </div>
             </div>

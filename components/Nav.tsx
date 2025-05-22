@@ -87,7 +87,7 @@ export default function Nav() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Leistungen</NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-zinc-400">
+              <NavigationMenuContent className="bg-zinc-400 text-black">
                 <div className="flex flex-col md:flex-row gap-6 p-6 md:w-[700px]">
                   <div className="w-full md:w-1/2 space-y-3">
                     {[
@@ -123,7 +123,7 @@ export default function Nav() {
                       </NavigationMenuLink>
                     ))}
                   </div>
-                  <div className="hidden md:block w-1/2 relative rounded-md overflow-hidden">
+                  <div className="hidden md:block w-1/2 scale-80 relative rounded-md overflow-hidden">
                     <Image
                       src="/images/brain.png"
                       alt="Leistungen Vorschau"

@@ -1,68 +1,116 @@
 [
   {
-    "slug": "terminplanung-therapeuten",
-    "title": "KI-basierte Terminplanung",
-    "industry": "Gesundheitswesen",
-    "summary": "Smarte App zur Verwaltung von Terminen in einer Therapeutenpraxis.",
-    "image": "/images/image8.jpg",
-    "challenge": "Die manuelle Terminvergabe war fehleranfällig.",
-    "solution": "Web-App mit KI-Erinnerungssystem & Kalenderintegration.",
-    "result": "Reduktion der No-Shows um 40 %.",
-    "technologies": ["Next.js", "Tailwind", "Supabase", "GPT-API"]
+    "slug": "tensionterminator",
+    "title": "TensionTerminator – Bewegungsanalyse & Haltungserkennung in Echtzeit",
+    "industry": "Digital Health / Physiotherapie",
+    "summary": "Moderne Webapp zur KI-gestützten Erkennung von Bewegungsdefiziten, muskulärer Spannung und Haltungseinschränkungen.",
+    "image": "/images/laptoptt.png",
+    "challenge": "Manuelle Haltungskontrolle und Bewegungsdokumentation sind zeitaufwendig und unpräzise.",
+    "solution": "Webbasierte Anwendung mit Gesichtserkennung, Bewegungsanalyse (ROM) und PDF-Verlaufsprotokollen – direkt im Browser nutzbar.",
+    "result": "Im Vergleich zur manuellen Messung spart die App pro Patient:in bis zu 90 % Zeit bei der Beweglichkeitserfassung und Dokumentation.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "Vercel",
+      "PostgreSQL",
+      "TensorFlow.js",
+      "pdf-lib",
+      "html2canvas",
+      "Tailwind CSS"
+    ],
+    "link": "https://evaluierung.ergophysion.com/"
   },
+
   {
     "slug": "fechtsport-analytik",
-    "title": "Matchdatenanalyse für den Fechtsport",
-    "industry": "Sportdatenanalyse",
-    "summary": "Automatisiertes Scraping und Auswertung internationaler Fechtturniere.",
-    "image": "/images/image7.jpg",
-    "challenge": "Manuelle Datenpflege über Excel war fehleranfällig und langsam.",
-    "solution": "Python-Scraper mit Export in strukturierte CSV-Dateien, ergänzt um Ranking- und Händigkeitserkennung.",
-    "result": "Über 20.000 Matches automatisiert verarbeitet, 8h/Woche gespart.",
-    "technologies": ["Python", "Playwright", "Pandas", "Regex"]
+    "title": "FIE-Datenanalyse zur Händigkeit im Fechtsport",
+    "industry": "Sportdatenanalyse / Wissenschaft",
+    "summary": "Wissenschaftliche Datenextraktion und -auswertung internationaler Fechtturniere zur Erforschung von Linkshändigkeit im Leistungssport.",
+    "image": "/images/FIE.png",
+    "challenge": "Für eine Forschungsstudie der Universität Trento wurden detaillierte Matchdaten zur Händigkeit von Fechter:innen benötigt – manuelle Pflege in Excel war unzuverlässig und zeitintensiv.",
+    "solution": "Modularer Python-Webcrawler mit automatisierter Extraktion von FIE-Matchdaten, Ergänzung durch Ranking- und Händigkeitserkennung sowie Umwandlung in strukturierte CSV-Datensätze.",
+    "result": "Über 22.000 Matches automatisiert verarbeitet, inkl. Anreicherungen zu Athletenrang und Händigkeit. Reduktion des manuellen Aufwands um ca. 8 Stunden pro Woche, signifikante Datenqualität für wissenschaftliche Auswertung.",
+    "technologies": [
+      "Python",
+      "Playwright",
+      "Pandas",
+      "Regex",
+      "BeautifulSoup",
+      "CSV",
+      "Data Mapping"
+    ]
+  },
+
+  {
+    "slug": "optical-flow-tracking",
+    "title": "Optical Flow & Objektverfolgung in Videosequenzen",
+    "industry": "Computer Vision / Videoanalyse",
+    "summary": "Tracking von Objekten in Videosequenzen mit dem Lucas-Kanade-Verfahren und Bewegungsanalyse auf Pixelbasis.",
+    "image": "/images/opticalFlow.png",
+    "challenge": "Objektbewegung soll in Videos robust verfolgt werden, auch bei Verdeckungen oder Kamerabewegungen – in Echtzeit und ohne Deep Learning.",
+    "solution": "Implementierung eines klassischen Optical-Flow-Workflows mit OpenCVs Lucas-Kanade-Methode zur Schätzung von Bewegungsvektoren und ROI-Verfolgung.",
+    "result": "Zuverlässige Objektverfolgung auf Basis klassischer Computer-Vision-Techniken, ohne Trainingsdaten – mit Visualisierung der Bewegungsvektoren und Bounding Box Tracking.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Jupyter Notebook"
+    ]
   },
   {
-    "slug": "iot-kamera-reverse-engineering",
-    "title": "Tapo Kamera Sicherheitsanalyse",
-    "industry": "IoT / Embedded Security",
-    "summary": "Reverse Engineering einer Smart-Kamera zur Schwachstellenanalyse.",
-    "image": "/images/image6.jpg",
-    "challenge": "Keine Dokumentation, verschlüsseltes Dateisystem, kein Root-Zugriff.",
-    "solution": "Firmware-Dump mit binwalk & UART-Hack, API-Analyse über App-Traffic.",
-    "result": "Zugriff auf alle API-Endpunkte & PoC zur Rechteeskalation.",
-    "technologies": ["Linux", "Binwalk", "UART", "apktool", "Burp Suite"]
+    "slug": "3d-rekonstruktion",
+    "title": "3D-Rekonstruktion mit OpenCV und Numpy",
+    "industry": "Computer Vision / Bildverarbeitung",
+    "summary": "Analyse-Workflow zur 3D-Rekonstruktion von Objekten anhand von 2D-Bildern, mit Feature-Matching und Tiefenschätzung.",
+    "image": "/images/3drecon.png",
+    "challenge": "Aus mehreren 2D-Bildern soll ein geometrisch korrekter 3D-Eindruck des Objekts rekonstruiert werden – ohne Spezialhardware.",
+    "solution": "Implementierung eines strukturierten OpenCV-Workflows mit Feature Detection, Epipolargeometrie, Tiefenberechnung und Visualisierung der Rekonstruktionspunkte.",
+    "result": "Erfolgreiche Rekonstruktion auf Basis realer Bilddaten, mit interaktiver Visualisierung und reproduzierbarem Code.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Pillow",
+      "Scipy",
+      "Jupyter Notebook"
+    ]
   },
   {
-    "slug": "bewegungsanalyse-rom",
-    "title": "ROM-Feedbacksystem für Therapie",
-    "industry": "Digital Health",
-    "summary": "Kopfbewegungserkennung mit SVG-Visualisierung und PDF-Export für Therapeuten.",
-    "image": "/images/image5.jpg",
-    "challenge": "Manuelle Dokumentation der Beweglichkeit war aufwendig und ungenau.",
-    "solution": "Kamera-basierte Erkennung von Yaw/Roll mit Echtzeit-Feedback auf SVG-Grafik.",
-    "result": "Exakte Verlaufskontrolle möglich, 60 % Zeitersparnis für Therapeuten.",
-    "technologies": ["React", "Canvas", "html2canvas", "pdf-lib"]
+    "slug": "feature-extraction-segmentation",
+    "title": "Feature-Extraktion & Bildsegmentierung",
+    "industry": "Computer Vision / Bildanalyse",
+    "summary": "Analysepipeline zur Extraktion signifikanter Bildmerkmale und Segmentierung relevanter Regionen mittels Schwellenwerten und Morphologie.",
+    "image": "/images/featureEx.png",
+    "challenge": "Ziel war es, aus komplexen Bilddaten robuste Merkmale zu extrahieren, um diese für nachgelagerte Analysen (z. B. Klassifikation) nutzbar zu machen.",
+    "solution": "Schrittweise CV-Pipeline mit Histogramm-Analyse, Kantendetektion, Schwellenwertverfahren, Morphologischen Operationen und Segmentierung auf Basis geometrischer Merkmale.",
+    "result": "Zuverlässige Extraktion und Trennung von Bildbereichen – vorbereitet für weiterführende Verarbeitungsschritte wie Objekterkennung oder Quantifizierung.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Scipy",
+      "Jupyter Notebook"
+    ]
   },
   {
-    "slug": "chatbot-terminplanung",
-    "title": "Conversational Terminbot für Friseure",
-    "industry": "Einzelhandel / Dienstleistung",
-    "summary": "Dialogbasierter Terminassistent für kleine Friseursalons.",
-    "image": "/images/image4.jpg",
-    "challenge": "Kunden rufen spontan an – oft während Behandlungen.",
-    "solution": "Ein KI-gestützter Chatbot übernimmt Terminvergabe via WhatsApp & Web.",
-    "result": "98 % weniger Anrufe, bessere Terminübersicht & höhere Kundenzufriedenheit.",
-    "technologies": ["LangChain", "GPT-4", "Twilio", "Next.js"]
-  },
-  {
-    "slug": "retail-dashboard",
-    "title": "Dashboards für Lager & Verkauf",
-    "industry": "Einzelhandel",
-    "summary": "Visualisierung von Lagerbeständen, Bestsellern und Tagesumsätzen in Echtzeit.",
-    "image": "/images/image3.jpg",
-    "challenge": "Veraltete Excel-Dateien, keine zentrale Übersicht.",
-    "solution": "Webbasiertes KPI-Dashboard mit Barcodescanner-Integration & Rollenmanagement.",
-    "result": "Fehlende Produkte halbiert, Umsatz-Transparenz verbessert.",
-    "technologies": ["Next.js", "Supabase", "Chart.js", "Barcode SDK"]
+    "slug": "bildverarbeitung-grundlagen",
+    "title": "Bildverarbeitung mit Python & OpenCV",
+    "industry": "Computer Vision / Bildanalyse",
+    "summary": "Einführung in grundlegende Operationen der Bildverarbeitung – von Filterung über Kanten- und Merkmalsextraktion bis zur Visualisierung.",
+    "image": "/images/bildverarbeitung.png",
+    "challenge": "Ziel war es, ein fundiertes Verständnis für grundlegende Bildverarbeitungsoperationen zu entwickeln – ohne High-Level-APIs oder Deep Learning.",
+    "solution": "Implementierung zentraler Methoden wie Glättung, Kantendetektion, Schwellenwertverfahren und Farbkanalanalyse mit OpenCV und Numpy.",
+    "result": "Eine reproduzierbare Analysepipeline zur Vorbereitung von Bilddaten – ideal für spätere Schritte wie Tracking, Segmentierung oder Klassifikation.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Jupyter Notebook"
+    ]
   }
 ]

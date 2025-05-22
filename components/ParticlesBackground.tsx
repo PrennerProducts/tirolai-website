@@ -108,16 +108,18 @@ export default function ParticlesBackground() {
       },
       detectRetina: true,
     }),
-    [isMobile]
+    [isMobile, isLowFPS]
   );
 
   if (init) {
     return (
-      <Particles
-        id="tsparticles-background" // NEUE ID!
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+      <div className="absolute inset-0 z-[10] pointer-events-none">
+        <Particles
+          id="tsparticles-background" // NEUE ID!
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+      </div>
     );
   }
 
