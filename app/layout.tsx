@@ -5,6 +5,7 @@ import './globals.css';
 // import { ThemeProvider } from 'next-themes';
 import Nav from '@/components/Nav'; // ✅ hier hinzufügen
 import Footer from '@/components/Footer'; // ✅ hier hinzufügen
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -60,6 +61,8 @@ export default function RootLayout({
           <Footer />
         </div>
         {/* </ThemeProvider> */}
+        {/* Vercel Analytics */}
+        <Analytics />
       </body>
     </html>
   );
