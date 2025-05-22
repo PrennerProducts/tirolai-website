@@ -58,11 +58,11 @@ export default function RootLayout({
         <div className="min-h-screen antialiased font-sans bg-background text-foreground">
           <Nav />
           {children}
+          <Analytics />
           <Footer />
         </div>
         {/* </ThemeProvider> */}
         {/* Vercel Analytics */}
-        <Analytics />
       </body>
     </html>
   );
