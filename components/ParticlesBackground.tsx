@@ -12,10 +12,12 @@ import {
 import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import useLowFPS from '@/hooks/useLowFPS';
 
 export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
   const isMobile = useIsMobileOrTablet(); // max-width: 1024px
+  const isLowFPS = useLowFPS(30); // Schwelle 30 FPS
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -45,11 +47,11 @@ export default function ParticlesBackground() {
       //   // color: '#18ffff', // optional
       // },
 
-      fpsLimit: isMobile ? 60 : 100,
+      fpsLimit: isMobile ? 30 : 60,
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: !isLowFPS,
             mode: 'push',
           },
           onHover: {

@@ -7,10 +7,12 @@ import { loadSlim } from '@tsparticles/slim';
 import { loadPolygonMaskPlugin } from '@tsparticles/plugin-polygon-mask';
 import type { ISourceOptions } from '@tsparticles/engine';
 import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
+import useLowFPS from '@/hooks/useLowFPS';
 
 export default function PolygonMaskParticles() {
   const [init, setInit] = useState(false);
   const isMobile = useIsMobileOrTablet(); // max-width: 1024px
+  const isLowFPS = useLowFPS(30); // Schwelle 30 FPS
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -21,7 +23,7 @@ export default function PolygonMaskParticles() {
 
   const options: ISourceOptions = {
     fullScreen: false,
-    fpsLimit: isMobile ? 60 : 100,
+    fpsLimit: isMobile ? 30 : 60,
     pauseOnBlur: false,
     interactivity: {
       events: {
@@ -56,7 +58,7 @@ export default function PolygonMaskParticles() {
       links: {
         color: 'random',
         distance: isMobile ? 20 : 30,
-        enable: true,
+        enable: !isLowFPS,
         opacity: 1,
         width: 1,
       },
@@ -67,7 +69,7 @@ export default function PolygonMaskParticles() {
         speed: 1,
       },
       number: {
-        value: isMobile ? 130 : 300,
+        value: isMobile ? 130 : 400,
       },
       opacity: {
         animation: {
@@ -86,10 +88,10 @@ export default function PolygonMaskParticles() {
     },
     polygon: {
       draw: {
-        enable: true,
+        enable: !isLowFPS,
         stroke: {
           color: '#fff',
-          opacity: 0.2,
+          opacity: 0.5,
           width: 1,
         },
       },
@@ -98,13 +100,13 @@ export default function PolygonMaskParticles() {
         radius: 5,
       },
       position: {
-        x: isMobile ? 50 : 30,
+        x: isMobile ? 50 : 32,
         y: isMobile ? 60 : 50,
       },
       inline: {
         arrangement: 'equidistant',
       },
-      scale: isMobile ? 0.5 : 1,
+      scale: isMobile ? 0.5 : 1.2,
       type: 'inline',
       url: 'Mountain.svg',
     },
