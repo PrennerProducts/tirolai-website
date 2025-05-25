@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: false, // required for next-themes
+  darkMode: 'class', // required for next-themes
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -20,6 +20,8 @@ module.exports = {
       animation: {
         'ai-glow': 'ai-glow 3s ease-in-out infinite',
         marquee: 'marquee 40s linear infinite',
+        'slow-pan': 'slowPan 100s linear infinite',
+        glow: 'glow 4s ease-in-out infinite',
       },
       keyframes: {
         'ai-glow': {
@@ -29,6 +31,14 @@ module.exports = {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        slowPan: {
+          '0%': { transform: 'translate(0, 0)' },
+          '100%': { transform: 'translate(-100px, -100px)' },
+        },
+        glow: {
+          '0%, 100%': { boxShadow: '0 0 10px #ec4899, 0 0 20px #0ea5e9' },
+          '50%': { boxShadow: '0 0 15px #0ea5e9, 0 0 30px #ec4899' },
         },
       },
     },

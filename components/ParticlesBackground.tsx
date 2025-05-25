@@ -41,7 +41,7 @@ export default function ParticlesBackground() {
   const options: ISourceOptions = useMemo(
     () => ({
       fullScreen: {
-        enable: true,
+        enable: false,
       },
       // background: {
       //   // color: '#18ffff', // optional

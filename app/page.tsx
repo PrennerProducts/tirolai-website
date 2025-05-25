@@ -22,18 +22,42 @@ export default function Home() {
       <Hero />
       <ServicesSection />
       {/* Slider statt Grid */}
-      <h1 className="text-3xl font-bold text-center mb-10 mt-6">
-        Erfolgsgeschichten
-      </h1>
-      <ProjectCarousel projects={projects} />
-      <div className="text-center mt-8  mb-6">
-        <Link
-          href="/references"
-          className="text-primary font-semibold underline"
-        >
-          Alle Referenzen ansehen →
-        </Link>
-      </div>
+      <section className="relative py-24 bg-zinc-900 text-white overflow-hidden">
+        {/* Grid-Hintergrund */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <svg
+            className="w-full h-full animate-slow-pan opacity-5"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="project-grid"
+                width="40"
+                height="40"
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M40 0 H0 V40" stroke="#0ea5e9" strokeWidth="0.4" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#project-grid)" />
+          </svg>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-extrabold text-cyan-400 text-center mb-12 tracking-tight">
+            Erfolgsgeschichten
+          </h2>
+          <ProjectCarousel projects={projects} />
+          <div className="text-center mt-10">
+            <Link
+              href="/references"
+              className="text-cyan-300 font-medium hover:underline"
+            >
+              Alle Referenzen ansehen →
+            </Link>
+          </div>
+        </div>
+      </section>
       <TestimonialsSection /> {/* 👈 Hier einfügen */}
       <HighlightsSection />
       <div className="bg-zinc-800">

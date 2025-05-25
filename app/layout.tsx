@@ -49,7 +49,10 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body suppressHydrationWarning>
+      <body
+        suppressHydrationWarning
+        className="bg-black text-white font-sans antialiased"
+      >
         {/* <ThemeProvider
           attribute="class"
           defaultTheme="light"

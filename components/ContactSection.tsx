@@ -41,12 +41,17 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 relative overflow-hidden">
-      {/* Hintergrund-Overlay (optional) */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-transparent" />
+    <section
+      id="contact"
+      className="py-24 px-6 relative overflow-hidden bg-zinc-900"
+    >
+      {/* Hintergrund-Overlay */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-cyan-500/10 via-white/5 to-transparent" />
 
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold text-white">Jetzt beraten lassen</h2>
+        <h2 className="text-4xl font-bold text-cyan-400">
+          Jetzt beraten lassen
+        </h2>
         <p className="mt-4 text-white/80 text-lg">
           Lass uns über deine Idee oder dein Projekt sprechen. Wir melden uns
           innerhalb von 24 Stunden.
@@ -55,7 +60,7 @@ export default function ContactSection() {
 
       <form
         onSubmit={handleSubmit}
-        className="max-w-2xl mx-auto bg-white backdrop-blur-md rounded-2xl shadow-xl p-8 sm:p-10 space-y-6"
+        className="max-w-2xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl p-8 sm:p-10 space-y-6"
       >
         {submitted ? (
           <p className="text-center text-green-400 font-semibold text-lg">
@@ -63,7 +68,7 @@ export default function ContactSection() {
           </p>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
                 name="name"
@@ -71,7 +76,7 @@ export default function ContactSection() {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="bg-white text-black placeholder-gray-500 border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-300 p-3 rounded-md outline-none transition"
+                className="bg-white/10 text-white placeholder-white/50 border border-white/20 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-300 p-3 rounded-md outline-none transition"
               />
               <input
                 type="email"
@@ -80,7 +85,7 @@ export default function ContactSection() {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="bg-white text-black placeholder-gray-500 border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-300 p-3 rounded-md outline-none transition"
+                className="bg-white/10 text-white placeholder-white/50 border border-white/20 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-300 p-3 rounded-md outline-none transition"
               />
             </div>
 
@@ -91,13 +96,13 @@ export default function ContactSection() {
               onChange={handleChange}
               rows={5}
               required
-              className="w-full bg-transparent border  text-black  focus:border-white/70 border-gray-300  rounded-md outline-none transition"
+              className="w-full bg-white/10 text-white placeholder-white/50 border border-white/20 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-300 p-3 rounded-md outline-none transition"
             />
 
             <Button
               type="submit"
               variant="cyan"
-              className="w-full text-black font-semibold"
+              className="w-full font-semibold"
             >
               Nachricht senden
             </Button>

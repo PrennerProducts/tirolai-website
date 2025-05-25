@@ -71,3 +71,10 @@ html {
     transform: translateX(-50%);
   }
 }
+
+.stroke-transition path,
+.stroke-transition line,
+.stroke-transition circle {
+  transition: stroke 1.5s ease-in-out;
+  stroke: #ff00ff; /* Pink */
+}

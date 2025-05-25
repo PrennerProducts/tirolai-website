@@ -64,17 +64,17 @@ export default function Nav() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         showSolidNav
-          ? 'bg-zinc-800 border-b border-white/10 shadow-xl backdrop-blur-md z-50'
+          ? 'bg-zinc-400 border-b border-white/10 shadow-xl backdrop-blur-md z-50'
           : 'bg-transparent border-transparent shadow-none'
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 group">
-          <Image src="/mountainWhite.png" width={80} height={80} alt="Logo" />
+          <Image src="/mountain.png" width={80} height={80} alt="Logo" />
           <div className="pt-2">
             <Image
-              src="/logofontWhite.png"
+              src="/logofont.png"
               width={150}
               height={150}
               alt="Logo Font"
@@ -83,7 +83,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop-Navigation */}
-        <NavigationMenu className="hidden md:block text-white">
+        <NavigationMenu className="hidden md:block text-black">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Leistungen</NavigationMenuTrigger>
