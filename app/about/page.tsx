@@ -2,6 +2,7 @@
 'use client';
 
 // import Image from 'next/image';
+import { Brain, Code, DatabaseZap } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -9,38 +10,35 @@ export default function AboutPage() {
       <h1 className="text-4xl font-bold mb-8 text-center">Über uns</h1>
 
       <p className="text-lg mb-6">
-        Willkommen bei <strong>TirolAI</strong> – wo Ideen zu smarten,
-        skalierbaren Lösungen werden. Unser Team verbindet Perspektiven aus
-        Nord- und Südtirol und arbeitet grenzüberschreitend daran, die digitale
-        Zukunft nachhaltig mitzugestalten – effizient, ethisch und innovativ.
+        Willkommen bei <strong>TirolAI</strong> – wo aus Ideen skalierbare,
+        intelligente Softwarelösungen entstehen. Unser Team bringt Perspektiven
+        aus Nord- und Südtirol zusammen und arbeitet grenzüberschreitend daran,
+        digitale Innovation praxisnah und verantwortungsvoll voranzutreiben.
       </p>
 
       <p className="text-lg mb-6">
-        Unser Team verbindet Expertise aus Mechatronik, Künstlicher Intelligenz,
-        Internet of Things und moderner Webentwicklung. Dabei denken wir
-        Technologie nie isoliert – sondern immer im Dienst der Menschen, die sie
-        nutzen.
+        Unsere Kompetenzen vereinen Künstliche Intelligenz, Internet of Things
+        und moderne Webentwicklung. Wir entwickeln Technologien mit echtem
+        Mehrwert – integriert, anwenderorientiert und zukunftsfähig.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Unsere Vision</h2>
       <p className="text-base text-muted-foreground mb-6">
-        Wir glauben daran, dass intelligente Systeme echte Probleme lösen müssen
-        – nicht Buzzword-getrieben, sondern nutzbringend, transparent und fair.
-        TirolAI steht für verantwortungsvolle Innovation: verständlich,
-        erweiterbar und mit klarer Wirkung. Unser Ziel ist es, AI und IoT nicht
-        nur großen Konzernen, sondern auch Startups, mittelständischen
-        Unternehmen und Organisationen in Tirol zugänglich zu machen.
+        Wir sind überzeugt: Intelligente Systeme sollten konkrete Probleme lösen
+        – nicht Trends hinterherlaufen. TirolAI steht für verständliche,
+        modulare und transparente Technologie. Unser Ziel ist es, AI und IoT
+        nicht nur großen Unternehmen, sondern auch Startups, KMU und
+        Organisationen in Tirol zugänglich zu machen.
       </p>
 
       <p className="text-base text-muted-foreground mb-6">
-        Wir wollen nicht nur mitdenken, sondern vorausdenken. Gemeinsam mit
-        unseren Kund:innen schaffen wir digitale Werkzeuge, die Prozesse
-        vereinfachen, Entscheidungen unterstützen und nachhaltige Mehrwerte
-        liefern.
+        Wir denken nicht nur mit – wir denken voraus. Gemeinsam mit unseren
+        Kund:innen gestalten wir digitale Werkzeuge, die Prozesse vereinfachen,
+        Entscheidungen unterstützen und nachhaltige Mehrwerte schaffen.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">Unser Team</h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 bg-white/5 rounded-2xl">
         <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center text-center">
           {/* <Image
             src="/images/dev1.jpg"
@@ -49,15 +47,19 @@ export default function AboutPage() {
             height={96}
             className="rounded-full mb-4 object-cover"
           /> */}
-          <h3 className="text-xl font-semibold mb-1">Martin Seppi</h3>
-          <p className="text-sm font-medium text-muted-foreground mb-1">
+          <Brain className="w-20 h-20 text-cyan-500 mb-4" />
+          <h3 className="text-2xl font-semibold mb-1">Martin Seppi</h3>
+          <div className="text-sm sm:text-base font-semibold text-accent mb-3 tracking-wide text-gray-600">
             Machine Learning Engineer
-          </p>
+          </div>
           <p className="text-sm text-muted-foreground">
-            BSc in Software Engineering, derzeit im MSc-Studium Artificial
-            Intelligence. Spezialisiert auf Machine Learning, Reinforcement
-            Learning und datengetriebene Systeme – mit Fokus auf
-            Modellentwicklung, Evaluation und Dateninfrastruktur.
+            BSc in Software Engineering, aktuell MSc Artificial Intelligence.
+            Martin ist unser Machine-Learning-Spezialist mit Fokus auf
+            Reinforcement Learning, modellbasierte KI und datengetriebene
+            Systeme. Er bringt tiefes Verständnis für Backend-Entwicklung,
+            API-Design, Datenbanken und skalierbare Systemarchitekturen mit –
+            und sorgt dafür, dass auch komplexe KI-Systeme performant und robust
+            in produktiven Anwendungen laufen.
           </p>
         </div>
 
@@ -69,36 +71,43 @@ export default function AboutPage() {
             height={200}
             className="rounded-full mb-4 object-cover"
           /> */}
-          <h3 className="text-xl font-semibold mb-1">Lukas Prenner</h3>
-          <p className="text-sm font-medium text-muted-foreground mb-1">
-            AI Engineer & UX Developer
-          </p>
+          <Code className="w-20 h-20 text-pink-500 mb-4" />
+
+          <h3 className="text-2xl font-semibold mb-1">Lukas Prenner</h3>
+          <div className="text-sm sm:text-base font-semibold text-accent mb-3 tracking-wide text-gray-600">
+            Fullstack AI & IoT Developer
+          </div>
           <p className="text-sm text-muted-foreground">
             <p className="text-sm text-muted-foreground">
               BSc in Software Engineering, derzeit MSc-Studium in Artificial
-              Intelligence. Bringt Erfahrung in Webentwicklung (Frontend &
-              Backend), UI/UX, DevOps sowie der Integration von KI-Systemen in
-              skalierbare Webanwendungen mit.
+              Intelligence. Bringt fundierte Erfahrung in moderner
+              Webentwicklung (Frontend & Backend), UI/UX-Design, DevOps und der
+              Integration von KI-Systemen in skalierbare Webplattformen mit.
+              Darüber hinaus war er aktiv an Forschungsprojekten im Bereich
+              IoT-Security beteiligt und verfügt über tiefgehendes Wissen in
+              IT-Sicherheit und Embedded-Systemen.
             </p>
           </p>
         </div>
-        {/* 
+
         <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-          <Image
-            src="/images/dev3.jpg"
-            alt="Dr. Tech"
-            width={96}
-            height={96}
-            className="rounded-full mb-4 object-cover"
-          />
-          <h3 className="text-xl font-semibold mb-1">Sepp Hochstapler</h3>
-          <p className="text-sm font-medium text-muted-foreground mb-1">
-            IoT Systems Architect
-          </p>
+          <DatabaseZap className="w-20 h-20  text-cyan-500  mb-4" />
+
+          <h3 className="text-2xl font-semibold mb-1">Robert Gollner</h3>
+          <div className="text-sm sm:text-base font-semibold text-accent mb-3 tracking-wide text-gray-600">
+            SAP & AI Engineer
+          </div>
           <p className="text-sm text-muted-foreground">
-            Spezialist für LSTM, Supervised und Unsupervised Leraning.
+            BSc in Software Engineering, aktuell MSc-Studium in Artificial
+            Intelligence. Robert bringt fundierte Erfahrung aus internationalen
+            Unternehmen mit, in denen er an der Entwicklung und Optimierung von
+            ERP-Systemen gearbeitet hat – insbesondere im SAP-Umfeld. Sein
+            Schwerpunkt liegt auf der Integration von SAP mit modernen
+            Webtechnologien und KI, um Geschäftsprozesse intelligent zu
+            automatisieren. Spezialisiert auf smarte Schnittstellen, skalierbare
+            Architekturen und effiziente, zukunftsorientierte Systemlösungen.
           </p>
-        </div> */}
+        </div>
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Was uns auszeichnet</h2>
