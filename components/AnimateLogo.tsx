@@ -36,7 +36,7 @@ export default function AnimatedLogo() {
       //stroke="#000"
       stroke="url(#animated-gradient)"
       strokeWidth="2"
-      className={`w-full h-auto max-w-[1600px] transition-all duration-[2000ms] ease-in-out ${
+      className={`w-full h-auto max-w-[1600px] transition-all duration-2000 ease-in-out ${
         isFilled ? 'fill-[url(#animated-gradient)] stroke-transparent' : ''
       }`}
     >

@@ -22,34 +22,16 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative z-10 py-24 bg-zinc-900 text-white text-center px-6 overflow-hidden"
+      className="relative z-10 py-24 text-center px-6 overflow-hidden bg-background text-foreground w-auto"
     >
       {/* 🔳 Subtiler SVG-Grid-Hintergrund */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <svg
-          className="w-full h-full opacity-5"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <pattern
-              id="grid-pattern"
-              width="40"
-              height="40"
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M40 0 H0 V40" stroke="#0ea5e9" strokeWidth="0.4" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-        </svg>
-      </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="text-4xl font-extrabold text-cyan-400 mb-12 tracking-tight">
+      <div className="max-w-6xl mx-auto relative z-10 bg-surface/80 backdrop-blur-md ">
+        <h2 className="text-4xl font-extrabold text-foreground mb-12 tracking-tight">
           Unsere Leistungen
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 z-10">
           <ServiceCard
             icon={<Globe className="w-8 h-8 text-cyan-500" />}
             title="Webentwicklung"
@@ -107,25 +89,25 @@ function ServiceCard({
     <Dialog>
       <DialogTrigger asChild>
         <div
-          className="group relative overflow-hidden p-6 bg-zinc-800 border border-white/10 rounded-xl 
-          shadow-sm hover:shadow-md hover:ring-2 hover:ring-cyan-500/40 transition-all cursor-pointer text-left"
+          className="group relative overflow-hidden p-6 bg-surface border border-muted rounded-xl 
+  shadow-sm hover:shadow-md hover:ring-2 hover:ring-accent/40 transition-all cursor-pointer text-left"
         >
           <div className="mb-4">{icon}</div>
-          <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-cyan-400 transition">
+          <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-accent transition">
             {title}
           </h3>
-          <p className="text-zinc-300">{text}</p>
-          <div className="mt-4 text-sm text-cyan-400 font-thin tracking-wide transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100">
+          <p className="text-muted">{text}</p>
+          <div className="mt-4 text-sm text-accent font-thin tracking-wide transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100">
             Mehr erfahren →
           </div>
         </div>
       </DialogTrigger>
 
-      <DialogContent className="bg-zinc-900 text-white rounded-xl shadow-xl px-6 sm:px-8 max-w-xl border border-white/10">
+      <DialogContent className="bg-white dark:bg-[#1f2937] text-black dark:text-white border border-muted rounded-xl shadow-xl p-8">
         <DialogHeader className="text-center">
           <div className="mb-2">{icon}</div>
           <DialogTitle className="text-2xl font-bold">{title}</DialogTitle>
-          <DialogDescription className="pt-4 text-base leading-relaxed text-zinc-300">
+          <DialogDescription className="pt-4 text-base leading-relaxed text-muted">
             {detailedText}
           </DialogDescription>
         </DialogHeader>

@@ -38,7 +38,7 @@ export function ProjectCarousel({ projects }: { projects: Project[] }) {
 
   return (
     <Carousel
-      className="w-full max-w-[100vw] overflow-hidden mx-auto"
+      className="w-full max-w-screen overflow-hidden mx-auto bg-surface/80 backdrop-blur-md "
       opts={{ loop: true }}
       setApi={setApi}
     >

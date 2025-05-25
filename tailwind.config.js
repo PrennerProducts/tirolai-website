@@ -9,9 +9,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        background: 'var(--background)', // z. B. bg-background
+        foreground: 'var(--foreground)', // z. B. text-foreground
+        surface: 'var(--surface)', // z. B. bg-surface (Karten, Dialoge)
+        muted: 'var(--muted)', // z. B. text-muted
+        accent: 'var(--accent)', // z. B. text-accent, ring-accent
+        highlight: 'var(--highlight)', // z. B. text-highlight
+        tirolai: 'var(--tirolai)', // Branding color
+      },
+      backgroundColor: {
+        surface: 'var(--surface)',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        tirolai: 'var(--tirolai)',
+      },
+      borderColor: {
+        muted: 'var(--muted)', // z. B. border-muted
+        foreground: 'var(--foreground)', // z. B. border-foreground
       },
       fontFamily: {
         sans: 'var(--font-sans)',

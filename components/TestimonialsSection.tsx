@@ -33,7 +33,7 @@ const customerLogos = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-24 bg-zinc-900 text-white overflow-hidden">
+    <section className="relative py-24 bg-background text-foreground overflow-hidden">
       {/* 🧠 Dezent animierter Hintergrund-Grid */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <svg
@@ -55,26 +55,24 @@ export default function TestimonialsSection() {
       </div>
 
       {/* 💬 Kundenstimmen */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 ">
+        <h2 className="text-3xl font-bold text-center mb-12 text-accent">
           Was unsere Kunden sagen
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 bg-surface/80 backdrop-blur-md ">
           {testimonials.map((t, i) => (
             <Card
               key={i}
-              className="bg-zinc-800/90 border border-white/10 rounded-xl shadow-md transition hover:ring-2 hover:ring-cyan-400/30 hover:shadow-lg"
+              className="bg-surface/90 border border-muted/20 rounded-xl shadow-md transition hover:ring-2 hover:ring-accent/40 hover:shadow-lg"
             >
               <CardContent className="p-6 flex flex-col gap-4">
-                <p className="italic text-zinc-300 leading-relaxed">
+                <p className="italic text-muted leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="text-sm font-semibold text-white mt-4">
+                <div className="text-sm font-semibold text-foreground mt-4">
                   {t.name}
-                  <div className="text-xs text-zinc-400 font-normal">
-                    {t.role}
-                  </div>
+                  <div className="text-xs text-muted font-normal">{t.role}</div>
                 </div>
               </CardContent>
             </Card>
@@ -82,8 +80,8 @@ export default function TestimonialsSection() {
         </div>
 
         {/* 🤝 Kundenlogos */}
-        <div className="mt-20 bg-white/5 backdrop-blur border border-white/10 p-6 rounded-2xl w-fit mx-auto">
-          <h3 className="text-xl font-semibold text-center mb-6 text-cyan-200">
+        <div className="mt-20 bg-surface/50 backdrop-blur border border-muted/20 p-6 rounded-2xl w-fit mx-auto">
+          <h3 className="text-xl font-semibold text-center mb-6 text-accent/80">
             Vertrauensvolle Partnerschaften
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-10">

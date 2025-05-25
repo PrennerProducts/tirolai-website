@@ -573,7 +573,7 @@ export default function PolygonMaskParticles() {
   };
 
   return init ? (
-    <div className="relative w-full max-w aspect-[1064/693] z-10">
+    <div className="relative w-full max-w aspect-1064/693 z-10">
       <Particles id="polygonParticles" options={options} />
     </div>
   ) : null;

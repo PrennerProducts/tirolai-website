@@ -1,29 +1,39 @@
-// app/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
 import Hero from '@/components/Hero';
 import ServicesSection from '@/components/ServicesSection';
 import HighlightsSection from '@/components/HighlightsSection';
-import projects from '@/data/projects.json';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import { ProjectCarousel } from '@/components/ProjectCarusel';
-import Link from 'next/link';
 import ContactSection from '@/components/ContactSection';
+import { ProjectCarousel } from '@/components/ProjectCarusel';
+import projects from '@/data/projects.json';
+import Link from 'next/link';
+import ParticlesBackground from '@/components/ParticlesBackground';
+import { useTheme } from 'next-themes';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
   return (
-    <main className="min-h-screen bg-gray-50 text-foreground">
+    <main className="relative min-h-screen bg-background text-foreground">
+      {/* 🌌 Globaler Partikel-Hintergrund */}
+      <div className="absolute inset-0 -z-10">
+        <ParticlesBackground isDark={isDark} />
+      </div>
       <Hero />
+
       <ServicesSection />
-      {/* Slider statt Grid */}
-      <section className="relative py-24 bg-zinc-900 text-white overflow-hidden">
-        {/* Grid-Hintergrund */}
+
+      {/* 💼 Project-Slider */}
+      <section className="relative py-24 bg-background text-foreground overflow-hidden">
+        {/* 🟦 Hintergrund-Particles ganz hinten */}
+
         <div className="absolute inset-0 z-0 pointer-events-none">
           <svg
             className="w-full h-full animate-slow-pan opacity-5"
@@ -44,23 +54,28 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-extrabold text-cyan-400 text-center mb-12 tracking-tight">
+          <h2 className="text-4xl font-extrabold text-accent text-center mb-12 tracking-tight">
             Erfolgsgeschichten
           </h2>
+
           <ProjectCarousel projects={projects} />
+
           <div className="text-center mt-10">
             <Link
               href="/references"
-              className="text-cyan-300 font-medium hover:underline"
+              className="text-accent font-medium hover:underline"
             >
               Alle Referenzen ansehen →
             </Link>
           </div>
         </div>
       </section>
-      <TestimonialsSection /> {/* 👈 Hier einfügen */}
+
+      <TestimonialsSection />
       <HighlightsSection />
-      <div className="bg-zinc-800">
+
+      {/* 📩 Kontakt-Section */}
+      <div className="bg-surface">
         <ContactSection />
       </div>
     </main>

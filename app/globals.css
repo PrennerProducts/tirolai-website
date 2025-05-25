@@ -1,80 +1,65 @@
+/* === globals.css === */
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* === Light Theme === */
+/* === Design Tokens === */
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --tirolai: #18ffff;
-  --font-sans: 'Geist', sans-serif;
-  --font-mono: 'Geist Mono', monospace;
+  --background: #f9fafb;
+  --surface: #ffffff;
+  --foreground: #111827;
+  --muted: #6b7280;
+  --accent: #0ea5e9;
+  --highlight: #6366f1;
+
+  --card-bg: var(--surface);
+  --card-border: #e5e7eb;
+  --btn-bg: var(--accent);
+  --btn-bg-hover: #0284c7;
+  --btn-text: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
-/* === Dark Theme === */
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ffffff;
+  --background: #0f172a;
+  --surface: #1e293b;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #0ea5e9;
+  --highlight: #7c3aed;
+
+  --card-bg: var(--surface);
+  --card-border: #334155;
+  --btn-bg: var(--accent);
+  --btn-bg-hover: #38bdf8;
+  --btn-text: #ffffff;
+  --shadow-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Apply base styles */
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
 }
 
-html {
-  scroll-behavior: smooth;
+/* === Utility Examples === */
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.backdrop-blur-md {
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+.btn-primary:hover {
+  background-color: var(--btn-bg-hover);
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.25s ease-out forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-}
-
-[data-state='open'].animate-fadeIn {
-  animation: fadeIn 0.25s ease-out forwards;
-}
-[data-state='closed'].animate-fadeOut {
-  animation: fadeOut 0.2s ease-in forwards;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.stroke-transition path,
-.stroke-transition line,
-.stroke-transition circle {
-  transition: stroke 1.5s ease-in-out;
-  stroke: #ff00ff; /* Pink */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 2px 0 var(--shadow-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: background 0.3s ease;
 }

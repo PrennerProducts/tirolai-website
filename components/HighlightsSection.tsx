@@ -4,7 +4,7 @@ import { Mountain, Brain, TrendingUp } from 'lucide-react';
 
 export default function HighlightsSection() {
   return (
-    <section className="relative py-24 bg-zinc-900 text-white overflow-hidden">
+    <section className="relative py-24 bg-background text-foreground overflow-hidden">
       {/* Hintergrund-Grid */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <svg
@@ -27,10 +27,10 @@ export default function HighlightsSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-extrabold text-cyan-400 tracking-tight">
+          <h3 className="text-4xl font-extrabold text-accent tracking-tight">
             Was uns auszeichnet
           </h3>
-          <p className="mt-4 text-lg text-zinc-300 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
             Technische Exzellenz trifft auf regionale Expertise – wir entwickeln
             skalierbare Systeme, die nicht nur funktionieren, sondern
             begeistern.
@@ -55,7 +55,7 @@ export default function HighlightsSection() {
           />
         </div>
 
-        <p className="text-center text-zinc-400 mt-16 italic">
+        <p className="text-center text-muted/80 mt-16 italic">
           Wir denken nicht nur digital – wir denken voraus.
         </p>
       </div>
@@ -73,13 +73,13 @@ function Highlight({
   text: string;
 }) {
   return (
-    <div className="group flex flex-col items-start bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-6 transition hover:shadow-lg hover:border-cyan-500/30">
-      <div className="mb-4 text-cyan-500 group-hover:text-cyan-400 transition-colors duration-300">
+    <div className="group flex flex-col items-start bg-surface/50 backdrop-blur-lg rounded-xl border border-muted/20 p-6 transition hover:shadow-lg hover:border-accent/40">
+      <div className="mb-4 text-accent group-hover:text-accent/80 transition-colors duration-300">
         {icon}
       </div>
 
-      <h4 className="text-xl font-semibold text-white mb-2">{title}</h4>
-      <p className="text-zinc-300 leading-relaxed">{text}</p>
+      <h4 className="text-xl font-semibold text-foreground mb-2">{title}</h4>
+      <p className="text-muted leading-relaxed">{text}</p>
     </div>
   );
 }

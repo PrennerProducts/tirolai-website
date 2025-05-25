@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -12,26 +12,39 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
 } from '@/components/ui/navigation-menu';
-import { Menu, X } from 'lucide-react';
-import { useRef } from 'react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import useIsScrolled from '@/hooks/useIsScrolled';
 import { usePathname } from 'next/navigation';
+import { useTheme } from 'next-themes';
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
-  // ref für außerhalb des x im Mobilemenue schlißt auch das mobilemenue
+  const [showNav, setShowNav] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLDivElement | null>(null);
 
-  // scroll listener
   const pathname = usePathname();
   const isHomepage = pathname === '/';
-
   const isScrolled = useIsScrolled();
   const showSolidNav = !isHomepage || isScrolled || isMobile || mobileOpen;
+
+  const { theme, resolvedTheme } = useTheme();
+  const isDark = theme === 'dark' || resolvedTheme === 'dark';
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const logo = mounted && isDark ? '/mountainWhite.png' : '/mountain.png';
+  const logoFont = mounted && isDark ? '/logofontWhite.png' : '/logofont.png';
+
+  useEffect(() => {
+    const t = setTimeout(() => setShowNav(true), 3500);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -55,39 +68,40 @@ export default function Nav() {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); // Initial prüfen
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  if (!mounted || !showNav) return null;
 
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         showSolidNav
-          ? 'bg-zinc-400 border-b border-white/10 shadow-xl backdrop-blur-md z-50'
+          ? 'bg-[rgba(14,164,233,0.35)] dark:bg-[rgba(30,41,59,0.85)] border-b border-muted/40 shadow-md backdrop-blur-md'
           : 'bg-transparent border-transparent shadow-none'
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 group">
-          <Image src="/mountain.png" width={80} height={80} alt="Logo" />
+          <Image src={logo} width={80} height={80} alt="Logo" priority />
           <div className="pt-2">
             <Image
-              src="/logofont.png"
+              src={logoFont}
               width={150}
               height={150}
               alt="Logo Font"
+              priority
             />
           </div>
         </Link>
 
-        {/* Desktop-Navigation */}
-        <NavigationMenu className="hidden md:block text-black">
+        <NavigationMenu className="hidden md:flex items-center text-foreground">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Leistungen</NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-zinc-400 text-black">
+              <NavigationMenuContent className="bg-surface text-foreground border border-muted">
                 <div className="flex flex-col md:flex-row gap-6 p-6 md:w-[700px]">
                   <div className="w-full md:w-1/2 space-y-3">
                     {[
@@ -111,14 +125,12 @@ export default function Nav() {
                       <NavigationMenuLink asChild key={idx}>
                         <Link
                           href="/#services"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 hover:text-accent"
                         >
                           <div className="text-sm font-medium leading-none">
                             {item.title}
                           </div>
-                          <p className="text-sm text-muted-foreground">
-                            {item.desc}
-                          </p>
+                          <p className="text-sm text-muted">{item.desc}</p>
                         </Link>
                       </NavigationMenuLink>
                     ))}
@@ -139,7 +151,9 @@ export default function Nav() {
               <NavigationMenuLink asChild>
                 <Link
                   href="/references"
-                  className="px-4 py-2 text-sm font-medium transition-colors hover:text-cyan-400"
+                  className={`px-4 py-2 text-sm font-medium transition-colors hover:text-accent ${
+                    pathname === '/references' ? 'text-accent' : ''
+                  }`}
                 >
                   Referenzen
                 </Link>
@@ -150,7 +164,9 @@ export default function Nav() {
               <NavigationMenuLink asChild>
                 <Link
                   href="/about"
-                  className="px-4 py-2 text-sm font-medium transition-colors hover:text-cyan-400"
+                  className={`px-4 py-2 text-sm font-medium transition-colors hover:text-accent ${
+                    pathname === '/about' ? 'text-accent' : ''
+                  }`}
                 >
                   Über uns
                 </Link>
@@ -165,16 +181,17 @@ export default function Nav() {
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
+
+          <div className="ml-4">
+            <ThemeToggle />
+          </div>
         </NavigationMenu>
 
         {/* Mobile Burger Button */}
         <div className="md:hidden" ref={buttonRef}>
           <button
-            onClick={() => {
-              const willOpen = !mobileOpen;
-              setMobileOpen(willOpen);
-            }}
-            className="text-white focus:outline-none"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-foreground focus:outline-none"
             aria-label="Toggle mobile menu"
           >
             {mobileOpen ? <X size={30} /> : <Menu size={30} />}
@@ -187,26 +204,26 @@ export default function Nav() {
         <div className="md:hidden px-6 pb-4">
           <div
             ref={menuRef}
-            className="flex flex-col space-y-2 bg-zinc-800 border-2 rounded-lg p-4 shadow-md"
+            className="flex flex-col space-y-2 bg-surface border border-muted rounded-lg p-4 shadow-md"
           >
             <Link
               href="/#services"
               onClick={() => setMobileOpen(false)}
-              className="text-white"
+              className="text-foreground"
             >
               Leistungen
             </Link>
             <Link
               href="/references"
               onClick={() => setMobileOpen(false)}
-              className="text-white"
+              className="text-foreground"
             >
               Referenzen
             </Link>
             <Link
               href="/about"
               onClick={() => setMobileOpen(false)}
-              className="text-white"
+              className="text-foreground"
             >
               Über uns
             </Link>
@@ -215,9 +232,30 @@ export default function Nav() {
                 Jetzt beraten lassen
               </Button>
             </Link>
+            <div className="pt-4 flex justify-center">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}
     </header>
+  );
+}
+
+function ThemeToggle() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
+  return (
+    <button
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      className="p-2 rounded-md text-foreground hover:bg-accent/10 transition"
+      aria-label="Theme wechseln"
+    >
+      {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+    </button>
   );
 }

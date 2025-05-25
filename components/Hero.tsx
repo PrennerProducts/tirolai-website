@@ -4,29 +4,39 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedLogo from './AnimateLogo';
 import { Button } from '@/components/ui/button';
-import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
-import ParticlesBackground from './ParticlesBackground'; // 💫 Partikel-Import
 
 export default function Hero() {
-  const [startAnimation, setStartAnimation] = useState(false);
   const [flash, setFlash] = useState(false);
   const [layoutReady, setLayoutReady] = useState(false);
   const [showText, setShowText] = useState(false);
-  const isMobile = useIsMobileOrTablet();
 
   useEffect(() => {
+    // ⬛ Theme manuell am <html>-Tag setzen
+    document.documentElement.classList.add('dark');
+
     const timers = [
-      setTimeout(() => setStartAnimation(true), 1500), // Start Logoanimation
-      setTimeout(() => setFlash(true), 2300), // Weißer Blitz
-      setTimeout(() => setLayoutReady(true), 2700), // Layout erscheint
-      setTimeout(() => setShowText(true), 3000), // Text fade-in
+      setTimeout(() => setFlash(true), 2300),
+      setTimeout(() => setLayoutReady(true), 2700),
+      setTimeout(() => setShowText(true), 3000),
+      setTimeout(() => {
+        const prefersDark = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches;
+        if (!prefersDark) {
+          document.documentElement.classList.remove('dark');
+        }
+      }, 3500),
     ];
-    return () => timers.forEach(clearTimeout);
+
+    return () => {
+      document.documentElement.classList.remove('dark');
+      timers.forEach(clearTimeout);
+    };
   }, []);
 
   return (
     <main>
-      <motion.section className="relative isolate overflow-hidden min-h-screen flex items-center justify-center bg-black text-white">
+      <motion.section className="relative isolate overflow-hidden min-h-screen flex items-center justify-center bg-background text-foreground">
         {/* 💥 Flash-Effekt */}
         {flash && (
           <motion.div
@@ -37,7 +47,7 @@ export default function Hero() {
           />
         )}
 
-        {/* ✨ Partikelhintergrund NACH Boom */}
+        {/* ✨ Partikelhintergrund */}
         {layoutReady && (
           <motion.div
             className="absolute inset-0 z-0"
@@ -45,7 +55,9 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
           >
-            <ParticlesBackground />
+            {/* <div className="absolute inset-0 z-0 pointer-events-none">
+              <ParticlesBackground isDark={isDark} />
+            </div> */}
           </motion.div>
         )}
 
@@ -64,7 +76,7 @@ export default function Hero() {
                 opacity: layoutReady ? 1 : 1,
               }}
               transition={{ duration: 1.2, ease: 'easeInOut' }}
-              className="w-[250px] sm:w-[320px] md:w-[400px]"
+              className="w-[250px] sm:w-[320px] md:w-[400px] "
             >
               <AnimatedLogo />
             </motion.div>
@@ -75,13 +87,13 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: 'easeOut' }}
-                className="w-full md:w-[48%] bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl shadow-xl"
+                className="w-full md:w-[48%] bg-surface/80 backdrop-blur-md border border-muted p-10 rounded-3xl shadow-xl"
               >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-foreground">
                   Digitale Intelligenz
                   <br className="hidden sm:block" /> aus Tirol.
                 </h1>
-                <p className="mt-6 text-lg sm:text-xl leading-relaxed text-white/80 max-w-xl">
+                <p className="mt-6 text-lg sm:text-xl leading-relaxed text-muted max-w-xl">
                   Wir entwickeln smarte Web- & KI-Lösungen für Unternehmen, die
                   vorausdenken.
                 </p>

@@ -28,7 +28,7 @@ export function ReferenceCard({
         </div>
 
         {/* Textinhalt */}
-        <div className="p-4 flex flex-col flex-grow">
+        <div className="p-4 flex flex-col grow">
           <h3 className="text-lg font-semibold mb-1">{title}</h3>
           <p className="text-sm text-muted-foreground line-clamp-3">
             {summary}

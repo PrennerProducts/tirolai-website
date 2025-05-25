@@ -157,7 +157,7 @@ export default function ParticlesWrapper() {
     },
   };
   return init ? (
-    <div className="relative w-full max-w-[1064.5px] aspect-[1064/693] z-10">
+    <div className="relative w-full max-w-[1064.5px] aspect-1064/693 z-10">
       <Particles id="logo-particles" options={options} />
     </div>
   ) : null;
