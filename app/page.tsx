@@ -16,16 +16,28 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === 'dark';
+  const [showParticles, setShowParticles] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+
+    const timer = setTimeout(() => {
+      setShowParticles(true);
+    }, 3600); // ⏱ 3,5 Sekunden nach Page-Load
+
+    return () => clearTimeout(timer);
+  }, []);
+
   if (!mounted) return null;
 
   return (
     <main className="relative min-h-screen bg-background text-foreground">
       {/* 🌌 Globaler Partikel-Hintergrund */}
-      <div className="absolute inset-0 -z-10">
-        <ParticlesBackground isDark={isDark} />
-      </div>
+      {showParticles && (
+        <div className="absolute inset-0 -z-10">
+          <ParticlesBackground isDark={isDark} />
+        </div>
+      )}
       <Hero />
 
       <ServicesSection />
