@@ -30,7 +30,7 @@ export default function ReferencesPage() {
 
       {/* Call to Action */}
       <div className="text-center mt-16">
-        <Link href="/kontakt">
+        <Link href="/contact">
           <Button size="lg">Projekt anfragen →</Button>
         </Link>
       </div>

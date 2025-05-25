@@ -101,7 +101,7 @@ export default function Nav() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Leistungen</NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-surface text-foreground border border-muted">
+              <NavigationMenuContent className="bg-white dark:bg-black text-foreground border border-muted">
                 <div className="flex flex-col md:flex-row gap-6 p-6 md:w-[700px]">
                   <div className="w-full md:w-1/2 space-y-3">
                     {[

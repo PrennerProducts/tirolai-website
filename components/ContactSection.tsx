@@ -43,25 +43,28 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 relative overflow-hidden bg-surface text-foreground"
+      className="py-24 px-6 relative overflow-hidden bg-surface text-foreground bg-background rounded-2xl"
     >
-      {/* Hintergrund-Overlay */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-accent/10 via-surface/10 to-transparent" />
+      {/* 🎨 Hintergrund-Overlay mit zartem Farbverlauf */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-accent/10 via-surface/20 to-transparent dark:via-white/5 pointer-events-none" />
 
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold text-accent">Jetzt beraten lassen</h2>
-        <p className="mt-4 text-muted text-lg">
-          Lass uns über deine Idee oder dein Projekt sprechen. Wir melden uns
-          innerhalb von 24 Stunden.
+        <h2 className="text-4xl font-bold text-accent flex items-center justify-center gap-3">
+          💬 Jetzt beraten lassen
+        </h2>
+        <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
+          Lass uns über deine Idee oder dein Projekt sprechen.
+          <br className="hidden sm:inline" /> Wir melden uns innerhalb von 24
+          Stunden.
         </p>
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="max-w-2xl mx-auto bg-surface/80 backdrop-blur-md rounded-2xl border border-muted p-8 sm:p-10 space-y-6"
+        className="max-w-2xl mx-auto bg-surface/80 dark:bg-white/5 backdrop-blur-md rounded-2xl border border-muted dark:border-white/10 p-8 sm:p-10 space-y-6 dark:shadow-md"
       >
         {submitted ? (
-          <p className="text-center text-accent font-semibold text-lg">
+          <p className="text-center text-accent font-semibold text-lg dark:text-cyan-400">
             Danke für deine Nachricht! 🎉
           </p>
         ) : (
@@ -74,7 +77,7 @@ export default function ContactSection() {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="bg-background/10 text-foreground placeholder-muted border border-muted focus:border-accent focus:ring-2 focus:ring-accent/50 p-3 rounded-md outline-none transition"
+                className="bg-white/50 dark:bg-white/10 text-gray-800 dark:text-white placeholder-muted border border-muted focus:border-accent focus:ring-2 focus:ring-accent/50 p-3 rounded-md outline-none transition"
               />
               <input
                 type="email"
@@ -83,7 +86,7 @@ export default function ContactSection() {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="bg-background/10 text-foreground placeholder-muted border border-muted focus:border-accent focus:ring-2 focus:ring-accent/50 p-3 rounded-md outline-none transition"
+                className="bg-white/50 dark:bg-white/10 text-gray-800 dark:text-white placeholder-muted border border-muted focus:border-accent focus:ring-2 focus:ring-accent/50 p-3 rounded-md outline-none transition"
               />
             </div>
 
@@ -94,13 +97,13 @@ export default function ContactSection() {
               onChange={handleChange}
               rows={5}
               required
-              className="w-full bg-background/10 text-foreground placeholder-muted border border-muted focus:border-accent focus:ring-2 focus:ring-accent/50 p-3 rounded-md outline-none transition"
+              className="w-full bg-white/50 dark:bg-white/10 text-gray-800 dark:text-white placeholder-muted border border-muted focus:border-accent focus:ring-2 focus:ring-accent/50 p-3 rounded-md outline-none transition"
             />
 
             <Button
               type="submit"
               variant="cyan"
-              className="w-full font-semibold"
+              className="w-full font-semibold text-base"
             >
               Nachricht senden
             </Button>
