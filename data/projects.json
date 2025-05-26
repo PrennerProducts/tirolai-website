@@ -1,13 +1,13 @@
 [
   {
     "slug": "tensionterminator",
-    "title": "TensionTerminator – Bewegungsanalyse & Haltungserkennung in Echtzeit",
-    "industry": "Digital Health / Physiotherapie",
-    "summary": "Moderne Webapp zur KI-gestützten Erkennung von Bewegungsdefiziten, muskulärer Spannung und Haltungseinschränkungen.",
+    "title": "TensionTerminator – Echtzeit-Bewegungsanalyse für Therapie & Prävention",
+    "industry": "Digital Health / Physiotherapie / Bewegungsanalyse",
+    "summary": "KI-gestützte Webanwendung zur präzisen Erfassung von Haltung, Beweglichkeit (ROM) und muskulären Spannungen – direkt im Browser, ohne zusätzliche Hardware.",
     "image": "/images/laptoptt.png",
-    "challenge": "Manuelle Haltungskontrolle und Bewegungsdokumentation sind zeitaufwendig und unpräzise.",
-    "solution": "Webbasierte Anwendung mit Gesichtserkennung, Bewegungsanalyse (ROM) und PDF-Verlaufsprotokollen – direkt im Browser nutzbar.",
-    "result": "Im Vergleich zur manuellen Messung spart die App pro Patient:in bis zu 90 % Zeit bei der Beweglichkeitserfassung und Dokumentation.",
+    "challenge": "Die manuelle Erhebung und Dokumentation von Beweglichkeit, Haltung und muskulärer Spannung ist fehleranfällig, zeitintensiv und schwer standardisierbar – insbesondere in dynamischen Therapiesettings.",
+    "solution": "Browserbasierte Anwendung mit automatischer Gesichtserkennung, KI-gestützter Haltungsanalyse und ROM-Winkelberechnung. Inklusive digitalem Patientenmanagement, Verlaufsprotokollen und PDF-Export für medizinische Dokumentation.",
+    "result": "Reduktion des Erfassungs- und Dokumentationsaufwands um bis zu 90 %. Standardisierte Bewegungsanalyse in unter 60 Sekunden pro Patient:in. Intuitive Nutzung auf jedem Endgerät ohne App-Installation.",
     "technologies": [
       "Next.js",
       "React",
@@ -25,12 +25,12 @@
   {
     "slug": "fechtsport-analytik",
     "title": "FIE-Datenanalyse zur Händigkeit im Fechtsport",
-    "industry": "Sportdatenanalyse / Wissenschaft",
-    "summary": "Wissenschaftliche Datenextraktion und -auswertung internationaler Fechtturniere zur Erforschung von Linkshändigkeit im Leistungssport.",
+    "industry": "Sportwissenschaft / Neurowissenschaft / Data Science",
+    "summary": "Automatisierte Erhebung und Analyse von über 400.000 internationalen Fechtmatches zur Erforschung der Auswirkungen von Linkshändigkeit im Leistungssport.",
     "image": "/images/FIE.png",
-    "challenge": "Für eine Forschungsstudie der Universität Trento wurden detaillierte Matchdaten zur Händigkeit von Fechter:innen benötigt – manuelle Pflege in Excel war unzuverlässig und zeitintensiv.",
-    "solution": "Modularer Python-Webcrawler mit automatisierter Extraktion von FIE-Matchdaten, Ergänzung durch Ranking- und Händigkeitserkennung sowie Umwandlung in strukturierte CSV-Datensätze.",
-    "result": "Über 22.000 Matches automatisiert verarbeitet, inkl. Anreicherungen zu Athletenrang und Händigkeit. Reduktion des manuellen Aufwands um ca. 8 Stunden pro Woche, signifikante Datenqualität für wissenschaftliche Auswertung.",
+    "challenge": "Für eine neurowissenschaftliche Forschungsstudie an der Universität Trento wurden großflächige, verlässliche Daten zu internationalen Fechtmatches samt Händigkeit und Weltranglistenplatz benötigt. Die manuelle Erhebung war fehleranfällig und zeitlich nicht realisierbar.",
+    "solution": "Entwicklung eines modularen Python-Crawlers mit automatisierter Extraktion und Anreicherung von Matchdaten (2004–2024) aus der FIE-Website. Ergänzt durch Händigkeitserkennung, Weltranglistendaten und strukturierte CSV-Exports für statistische Auswertungen.",
+    "result": "Über 400.000 Matches automatisiert verarbeitet und mit Metadaten wie Händigkeit, Geschlecht, Nation und Ranking angereichert. Grundlage für eine hochauflösende Analyse der Frage, ob Linkshänder im Fechtsport einen systematischen Vorteil haben. Deutliche Reduktion manueller Aufwände und erhöhte wissenschaftliche Datenqualität.",
     "technologies": [
       "Python",
       "Playwright",
@@ -38,7 +38,9 @@
       "Regex",
       "BeautifulSoup",
       "CSV",
-      "Data Mapping"
+      "Data Mapping",
+      "Data Enrichment",
+      "Web Scraping"
     ]
   },
 

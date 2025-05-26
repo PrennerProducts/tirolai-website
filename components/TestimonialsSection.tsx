@@ -7,20 +7,14 @@ const testimonials = [
   {
     name: 'Martin Feuerstein, Ergophysion',
     quote:
-      'Mit TirolAI konnten wir unsere Vision einer KI-gestützten Bewegungsanalyse erstmals realisieren. Die Zusammenarbeit war hochprofessionell, lösungsorientiert – und das Ergebnis begeistert sowohl unser Team als auch unsere Patient:innen.',
+      'Mit TirolAI konnten wir ein vollständig digitales Gesundheitsevent-Management realisieren – inklusive Teilnehmerverwaltung, QR-Code-System, medizinischem Fragebogen und automatisierter Auswertung. Besonders beeindruckt hat uns die KI-gestützte Beweglichkeitsanalyse per Gesichtserkennung und ROM-Winkelberechnung. Die Zusammenarbeit war nicht nur hochprofessionell, sondern auch extrem effizient – das Ergebnis begeistert sowohl unser Team als auch unsere Patient:innen.',
     role: 'Gründer & Geschäftsführer',
   },
   {
-    name: 'Sarah Müller, MedTech Vision',
+    name: 'Dr. Simon Tim, Universität Trento',
     quote:
-      'Die Expertise von TirolAI im Bereich Edge AI war entscheidend für die Entwicklung unseres innovativen Diagnosetools. Absolut empfehlenswert.',
-    role: 'Leiterin Produktentwicklung',
-  },
-  {
-    name: 'Dr. Jonas Becker, FutureData GmbH',
-    quote:
-      'Durch TirolAIs maßgeschneiderte ML-Modelle konnten wir unsere Vorhersagegenauigkeit deutlich steigern – und das bei geringerer Latenz.',
-    role: 'Head of AI',
+      'TirolAI hat für unser Forschungsprojekt eine einzigartige Datenbasis geschaffen: Über 400.000 internationale Fechtmatches wurden strukturiert gescraped, normalisiert und ausgewertet – mit Fokus auf Händigkeit und Matchverläufe. Dank dieser Daten konnten wir erstmals großflächig analysieren, ob Linkshänder beim Fechten einen systematischen Vorteil haben. Die Zusammenarbeit war wissenschaftlich fundiert, technisch exzellent und jederzeit lösungsorientiert.',
+    role: 'Neurowissenschaftler, Universität Trento',
   },
 ];
 

@@ -17,6 +17,7 @@ interface Project {
   result: string;
   technologies: string[];
   industry?: string;
+  link?: string;
 }
 
 export default async function ProjectDetailPage({
@@ -48,13 +49,17 @@ export default async function ProjectDetailPage({
         href="/references"
         className="inline-block mb-6 text-sm text-primary hover:underline"
       >
-        ← Alle Referenzprojekte ansehen
+        ← Zurück zu allen Referenzen
       </Link>
 
-      <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-      <p className="text-muted-foreground mb-8 italic">{project.industry}</p>
+      <h1 className="text-4xl font-bold tracking-tight mb-2 text-foreground">
+        {project.title}
+      </h1>
+      {project.industry && (
+        <p className="text-sm text-muted-foreground mb-6">{project.industry}</p>
+      )}
 
-      <div className="relative w-full h-64 rounded-lg overflow-hidden mb-10">
+      <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-md mb-12">
         <Image
           src={project.image}
           alt={project.title}
@@ -63,17 +68,55 @@ export default async function ProjectDetailPage({
         />
       </div>
 
-      <div className="prose prose-neutral dark:prose-invert">
-        <h2>Herausforderung</h2>
+      <div className="prose prose-neutral dark:prose-invert max-w-none">
+        <h2 className="text-2xl font-semibold text-accent mt-10 mb-2">
+          Herausforderung
+        </h2>
         <p>{project.challenge}</p>
 
-        <h2>Unsere Lösung</h2>
+        <h2 className="text-2xl font-semibold text-accent mt-10 mb-2">
+          Unsere Lösung
+        </h2>
         <p>{project.solution}</p>
 
-        <h2>Ergebnis</h2>
+        <h2 className="text-2xl font-semibold text-accent mt-10 mb-2">
+          Ergebnis
+        </h2>
         <p>{project.result}</p>
 
-        <h2>Techstack</h2>
+        {project.link && (
+          <div className="mt-10">
+            <h2 className="text-2xl font-semibold text-accent mt-10 mb-2">
+              Projektlink
+            </h2>
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-black dark:text-white hover:bg-primary/90 transition shadow-md"
+            >
+              Projekt ansehen
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 3h7m0 0v7m0-7L10 14"
+                />
+              </svg>
+            </Link>
+          </div>
+        )}
+
+        <h2 className="text-2xl font-semibold text-accent mt-10 mb-2">
+          Techstack
+        </h2>
         <ul>
           {project.technologies.map((tech, i) => (
             <li key={i}>{tech}</li>
@@ -81,7 +124,7 @@ export default async function ProjectDetailPage({
         </ul>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-16 mb-4">Weitere Projekte</h2>
+      <h2 className="text-2xl font-semibold mt-20 mb-4">Weitere Projekte</h2>
       <ProjectCarousel projects={otherProjects} />
     </main>
   );
