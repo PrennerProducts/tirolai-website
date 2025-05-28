@@ -1,13 +1,13 @@
 export default function ImpressumPage() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-16 text-gray-800 mt-8">
+    <main className="max-w-3xl mx-auto px-4 py-16 text-gray-800 dark:text-white mt-8">
       <h1 className="text-3xl font-bold mb-6">Impressum</h1>
 
       <div className="space-y-4 text-base leading-relaxed">
         <p>
-          <strong>Tirol AI</strong>
+          <strong>Tirol AI GmbH (in Gründung)</strong>
           <br />
-          Inhaber: Lukas Johannes Prenner
+          Verantwortlich: Lukas Johannes Prenner
           <br />
           Schießstand 356
           <br />
@@ -27,26 +27,14 @@ export default function ImpressumPage() {
         </p>
 
         <p>
-          Unternehmensform: Einzelunternehmen
-          <br />
-          UID-Nummer: ATU73692408
-          <br />
-          Mitglied der Wirtschaftskammer Österreich (WKO)
-          <br />
-          Fachgruppe: Information und Consulting
-          <br />
-          Gewerbeberechtigung: Dienstleistungen in der automatischen
-          Datenverarbeitung und Informationstechnik
+          Dieses Projekt dient der Vorbereitung und Gründung der Tirol AI GmbH.
+          Die Gesellschaft befindet sich in der Gründungsphase. Eine
+          Gewerbeanmeldung sowie die Eintragung ins Firmenbuch werden
+          vorbereitet.
         </p>
 
         <p>
-          Zuständige Aufsichtsbehörde:
-          <br />
-          Bezirkshauptmannschaft Innsbruck-Land
-        </p>
-
-        <p>
-          Dieses Impressum gilt auch für folgende Onlinepräsenzen:
+          Dieses Impressum gilt auch für folgende Onlinepräsenz:
           <br />
           <a
             href="https://www.tirolai.at"
