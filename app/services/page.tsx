@@ -1,3 +1,11 @@
+'use client';
+
+import ServicesSection from '@/components/ServicesSection';
+
 export default function ServicesPage() {
-  return <div>Coming soon...</div>;
+  return (
+    <main className="max-w-7xl mx-auto py-20 px-6">
+      <ServicesSection />
+    </main>
+  );
 }
