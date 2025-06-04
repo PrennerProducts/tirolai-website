@@ -9,8 +9,6 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuLink,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
 } from '@/components/ui/navigation-menu';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import useIsScrolled from '@/hooks/useIsScrolled';
@@ -31,8 +29,8 @@ export default function Nav() {
   const isScrolled = useIsScrolled();
   const showSolidNav = !isHomepage || isScrolled || isMobile || mobileOpen;
 
-  const { theme, resolvedTheme } = useTheme();
-  const isDark = theme === 'dark' || resolvedTheme === 'dark';
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   useEffect(() => {
     setMounted(true);
@@ -100,51 +98,16 @@ export default function Nav() {
         <NavigationMenu className="hidden md:flex items-center text-foreground">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Leistungen</NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white dark:bg-black text-foreground border border-muted">
-                <div className="flex flex-col md:flex-row gap-6 p-6 md:w-[700px]">
-                  <div className="w-full md:w-1/2 space-y-3">
-                    {[
-                      {
-                        title: 'Individuelle KI-Lösungen',
-                        desc: 'Maßgeschneiderte Lösungen für dein Unternehmen',
-                      },
-                      {
-                        title: 'Prozessautomatisierung',
-                        desc: 'Von repetitiv zu intelligent – automatisiere deine Prozesse',
-                      },
-                      {
-                        title: 'Conversational Interfaces',
-                        desc: 'Chatbots und Voicebots mit natürlicher Sprachverarbeitung',
-                      },
-                      {
-                        title: 'Branchenlösungen',
-                        desc: 'KI für Gesundheit, Industrie, Tourismus & mehr',
-                      },
-                    ].map((item, idx) => (
-                      <NavigationMenuLink asChild key={idx}>
-                        <Link
-                          href="/#services"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 hover:text-accent"
-                        >
-                          <div className="text-sm font-medium leading-none">
-                            {item.title}
-                          </div>
-                          <p className="text-sm text-muted">{item.desc}</p>
-                        </Link>
-                      </NavigationMenuLink>
-                    ))}
-                  </div>
-                  <div className="hidden md:block w-1/2 scale-80 relative rounded-md overflow-hidden">
-                    <Image
-                      src="/images/brain.png"
-                      alt="Leistungen Vorschau"
-                      fill
-                      className="object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-              </NavigationMenuContent>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/services"
+                  className={`px-4 py-2 text-sm font-medium transition-colors hover:text-accent ${
+                    pathname.startsWith('/services') ? 'text-accent' : ''
+                  }`}
+                >
+                  Leistungen
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -207,12 +170,13 @@ export default function Nav() {
             className="flex flex-col space-y-2 bg-surface border border-muted rounded-lg p-4 shadow-md"
           >
             <Link
-              href="/#services"
+              href="/services"
               onClick={() => setMobileOpen(false)}
               className="text-foreground"
             >
               Leistungen
             </Link>
+
             <Link
               href="/references"
               onClick={() => setMobileOpen(false)}

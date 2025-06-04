@@ -21,18 +21,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'TirolAI – Digitale Intelligenz aus Tirol',
-  description: 'Moderne Web- und KI-Lösungen für Unternehmen mit Weitblick.',
+  title:
+    'TirolAI – KI, Automatisierung & Digitalisierung für Tiroler Unternehmen',
+  description:
+    'Praxisnahe KI-Lösungen, AI-Prototyping, Prozessautomatisierung, Webentwicklung, IoT-Integration, AI-Schulungen und Förderberatung für KMU & Startups in Tirol.',
   keywords: [
-    'TirolAI',
-    'Webentwicklung',
-    'KI',
-    'Softwareentwicklung',
+    'KI Tirol',
     'AI Tirol',
+    'Digitalisierung Tirol',
+    'KMU Förderberatung',
+    'AI-Prototyping',
+    'Prozessautomatisierung',
+    'Webentwicklung Tirol',
+    'IoT Predictive Maintenance',
+    'AI-Schulungen Tirol',
   ],
   authors: [{ name: 'TirolAI' }],
-  icons: {
-    icon: '/favicon.ico',
+  icons: { icon: '/favicon.ico' },
+  openGraph: {
+    title: 'TirolAI – KI & Digitalisierung für Tiroler Unternehmen',
+    description:
+      'Praxisnahe KI-Lösungen, AI-Prototyping, Prozessautomatisierung, Webentwicklung, IoT-Lösungen und Förderberatung.',
+    url: 'https://www.tirolai.at',
+    siteName: 'TirolAI',
+    images: [
+      {
+        url: 'https://www.tirolai.at/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TirolAI Logo',
+      },
+    ],
+    type: 'website',
   },
 };
 
@@ -53,8 +73,8 @@ export default function RootLayout({
       <body className="bg-background text-foreground" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <div className="min-h-screen antialiased font-sans bg-background text-foreground">
