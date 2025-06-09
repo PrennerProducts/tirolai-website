@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useMemo, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import {
@@ -10,17 +11,21 @@ import {
 import { loadSlim } from '@tsparticles/slim';
 import useIsMobileOrTablet from '@/hooks/useIsMobileOrTablet';
 import useLowFPS from '@/hooks/useLowFPS';
+import { useTheme } from 'next-themes';
 
-type ParticlesBackgroundProps = {
-  isDark: boolean;
-};
-
-export default function ParticlesBackground({
-  isDark,
-}: ParticlesBackgroundProps) {
+export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
+
   const isMobile = useIsMobileOrTablet();
   const isLowFPS = useLowFPS(30);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -36,19 +41,12 @@ export default function ParticlesBackground({
 
   const options: ISourceOptions = useMemo(
     () => ({
-      fullScreen: {
-        enable: false,
-      },
-      // background: {
-      //   // color: '#18ffff', // optional
-      // },
-
+      fullScreen: { enable: false },
       fpsLimit: isMobile ? 60 : 120,
       interactivity: {
         events: {
           onClick: {
             enable: !isLowFPS,
-            //enable: false,
             mode: 'push',
           },
           onHover: {
@@ -57,21 +55,14 @@ export default function ParticlesBackground({
           },
         },
         modes: {
-          push: {
-            quantity: isMobile ? 2 : 5,
-          },
-          repulse: {
-            distance: 100,
-            duration: 0.1,
-          },
+          push: { quantity: isMobile ? 2 : 5 },
+          repulse: { distance: 100, duration: 0.1 },
         },
       },
       particles: {
-        color: {
-          value: isDark ? '#fff' : '#000',
-        },
+        color: { value: isDark ? '#ffffff' : '#000000' },
         links: {
-          color: isDark ? '#fff' : '#000',
+          color: isDark ? '#ffffff' : '#000000',
           distance: 200,
           enable: true,
           opacity: 0.5,
@@ -80,45 +71,33 @@ export default function ParticlesBackground({
         move: {
           direction: MoveDirection.none,
           enable: true,
-          outModes: {
-            default: OutMode.out,
-          },
+          outModes: { default: OutMode.out },
           random: false,
           speed: 3,
           straight: false,
         },
         number: {
-          density: {
-            enable: true,
-          },
+          density: { enable: true },
           value: isMobile ? 20 : 60,
         },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: 'circle',
-        },
-        size: {
-          value: { min: 2, max: 4 },
-        },
+        opacity: { value: 0.5 },
+        shape: { type: 'circle' },
+        size: { value: { min: 2, max: 4 } },
       },
       detectRetina: true,
     }),
     [isMobile, isLowFPS, isDark]
   );
 
-  if (init) {
-    return (
-      <div className="absolute inset-0 -z-10 pointer-events-none ">
-        <Particles
-          id="tsparticles-background"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
-      </div>
-    );
-  }
+  if (!mounted || !init || !resolvedTheme) return null;
 
-  return <></>;
+  return (
+    <div className="absolute inset-0 -z-10 pointer-events-none">
+      <Particles
+        id="tsparticles-background"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
+    </div>
+  );
 }

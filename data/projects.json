@@ -48,17 +48,19 @@
     "slug": "optical-flow-tracking",
     "title": "Optical Flow & Objektverfolgung in Videosequenzen",
     "industry": "Computer Vision / Videoanalyse",
-    "summary": "Tracking von Objekten in Videosequenzen mit dem Lucas-Kanade-Verfahren und Bewegungsanalyse auf Pixelbasis.",
+    "summary": "Tracking von Objekten in Videosequenzen mit klassischen Verfahren: Lucas-Kanade (Sparse Optical Flow) und Farnebäck (Dense Optical Flow).",
     "image": "/images/opticalFlow.png",
-    "challenge": "Objektbewegung soll in Videos robust verfolgt werden, auch bei Verdeckungen oder Kamerabewegungen – in Echtzeit und ohne Deep Learning.",
-    "solution": "Implementierung eines klassischen Optical-Flow-Workflows mit OpenCVs Lucas-Kanade-Methode zur Schätzung von Bewegungsvektoren und ROI-Verfolgung.",
-    "result": "Zuverlässige Objektverfolgung auf Basis klassischer Computer-Vision-Techniken, ohne Trainingsdaten – mit Visualisierung der Bewegungsvektoren und Bounding Box Tracking.",
+    "challenge": "In industriellen, medizinischen oder sportlichen Anwendungen sollen bewegte Objekte zuverlässig verfolgt werden – robust gegen Verdeckungen, Kamerabewegung und ohne Deep Learning.",
+    "solution": "Implementierung zweier bewährter Optical-Flow-Methoden:\n1. Lucas-Kanade (sparse): verfolgt markante Punkte über Frames hinweg durch lokale Gradientenabschätzung.\n2. Farnebäck (dense): berechnet Bewegungsvektoren für jedes Pixel über eine polynomiale Approximation.\n\nZudem: Visualisierung per HSV-Farbraum (Richtung als Farbton, Stärke als Helligkeit) und Bounding-Box-Tracking durch Weiterleitung der Punktverläufe.",
+    "result": "Ein robuster, datensatzfreier Tracking-Workflow, ideal für ressourcenarme Systeme. Visualisierung der Bewegungsrichtung durch Farbcodierung, zuverlässige Verfolgung in Echtzeit und modular einsetzbar z. B. in Maschinenvision oder Sportanalyse.",
     "technologies": [
       "Python",
       "OpenCV",
       "Numpy",
       "Matplotlib",
-      "Jupyter Notebook"
+      "Jupyter Notebook",
+      "Lucas-Kanade Optical Flow",
+      "Farnebäck Optical Flow"
     ]
   },
   {

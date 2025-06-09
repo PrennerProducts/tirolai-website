@@ -4,26 +4,8 @@ import { Mountain, Brain, TrendingUp } from 'lucide-react';
 
 export default function HighlightsSection() {
   return (
-    <section className="relative py-24 bg-background text-foreground overflow-hidden">
+    <section className="relative py-24  text-foreground overflow-hidden">
       {/* Hintergrund-Grid */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <svg
-          className="w-full h-full animate-slow-pan opacity-5"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <pattern
-              id="highlight-grid"
-              width="40"
-              height="40"
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M40 0 H0 V40" stroke="#0ea5e9" strokeWidth="0.4" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#highlight-grid)" />
-        </svg>
-      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">

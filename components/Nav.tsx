@@ -19,7 +19,6 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showNav, setShowNav] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLDivElement | null>(null);
@@ -28,16 +27,6 @@ export default function Nav() {
   const isHomepage = pathname === '/';
   const isScrolled = useIsScrolled();
   const showSolidNav = !isHomepage || isScrolled || isMobile || mobileOpen;
-
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const logo = mounted && isDark ? '/mountainWhite.png' : '/mountain.png';
-  const logoFont = mounted && isDark ? '/logofontWhite.png' : '/logofont.png';
 
   useEffect(() => {
     const t = setTimeout(() => setShowNav(true), 3500);
@@ -71,7 +60,7 @@ export default function Nav() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (!mounted || !showNav) return null;
+  if (!showNav) return null;
 
   return (
     <header
@@ -83,14 +72,43 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         <Link href="/" className="flex items-center space-x-2 group">
-          <Image src={logo} width={80} height={80} alt="Logo" priority />
+          {/* Dark Mode Logo */}
+          <Image
+            src="/mountainWhite.png"
+            width={80}
+            height={80}
+            alt="Logo"
+            priority
+            className="hidden dark:block"
+          />
+          {/* Light Mode Logo */}
+          <Image
+            src="/mountain.png"
+            width={80}
+            height={80}
+            alt="Logo"
+            priority
+            className="block dark:hidden"
+          />
+
           <div className="pt-2">
+            {/* Dark Font Logo */}
             <Image
-              src={logoFont}
+              src="/logofontWhite.png"
               width={150}
               height={150}
               alt="Logo Font"
               priority
+              className="hidden dark:block"
+            />
+            {/* Light Font Logo */}
+            <Image
+              src="/logofont.png"
+              width={150}
+              height={150}
+              alt="Logo Font"
+              priority
+              className="block dark:hidden"
             />
           </div>
         </Link>

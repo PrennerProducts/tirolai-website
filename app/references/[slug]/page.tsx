@@ -67,6 +67,39 @@ export default async function ProjectDetailPage({
           className="object-cover"
         />
       </div>
+      {project.slug === 'optical-flow-tracking' && (
+        <div className="mt-12 space-y-8">
+          <h2 className="text-2xl font-semibold text-accent">Beispielvideos</h2>
+
+          <div className="rounded-xl overflow-hidden shadow-md">
+            <p className="text-sm text-muted-foreground mb-2">
+              Sparse Optical Flow
+            </p>
+            <video
+              controls
+              className="w-full h-auto rounded-xl"
+              // poster="/images/opticalFlow.png"
+            >
+              <source src="/videos/output_sparse_flow.mp4" type="video/mp4" />
+              Dein Browser unterstützt keine Videoanzeige.
+            </video>
+          </div>
+
+          <div className="rounded-xl overflow-hidden shadow-md">
+            <p className="text-sm text-muted-foreground mb-2">
+              Dense Optical Flow
+            </p>
+            <video
+              controls
+              className="w-full h-auto rounded-xl"
+              // poster="/images/opticalFlow.png"
+            >
+              <source src="/videos/output_dense_flow.mp4" type="video/mp4" />
+              Dein Browser unterstützt keine Videoanzeige.
+            </video>
+          </div>
+        </div>
+      )}
 
       <div className="prose prose-neutral dark:prose-invert max-w-none">
         <h2 className="text-2xl font-semibold text-accent mt-10 mb-2">
