@@ -11,27 +11,12 @@ export default function Hero() {
   const [showText, setShowText] = useState(false);
 
   useEffect(() => {
-    // ⬛ Theme manuell am <html>-Tag setzen
-    document.documentElement.classList.add('dark');
-
     const timers = [
       setTimeout(() => setFlash(true), 2300),
       setTimeout(() => setLayoutReady(true), 2700),
       setTimeout(() => setShowText(true), 3000),
-      setTimeout(() => {
-        const prefersDark = window.matchMedia(
-          '(prefers-color-scheme: dark)'
-        ).matches;
-        if (!prefersDark) {
-          document.documentElement.classList.remove('dark');
-        }
-      }, 3500),
     ];
-
-    return () => {
-      document.documentElement.classList.remove('dark');
-      timers.forEach(clearTimeout);
-    };
+    return () => timers.forEach(clearTimeout);
   }, []);
 
   return (
