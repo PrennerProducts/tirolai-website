@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -7,6 +6,8 @@ import Nav from '@/components/Nav'; // ✅ hier hinzufügen
 import Footer from '@/components/Footer'; // ✅ hier hinzufügen
 import { Analytics } from '@vercel/analytics/next';
 import { ThemeProvider } from 'next-themes';
+import { LocaleProvider } from './locale-context';
+import IntlClientProvider from './intl-client-provider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -77,13 +78,17 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <div className="min-h-screen antialiased font-sans bg-background text-foreground">
-            <Nav />
-            {children}
-            {/* Vercel Analytics */}
-            <Analytics />
-            <Footer />
-          </div>
+          <LocaleProvider>
+            <IntlClientProvider>
+              <div className="min-h-screen antialiased font-sans bg-background text-foreground">
+                <Nav />
+                {children}
+                {/* Vercel Analytics */}
+                <Analytics />
+                <Footer />
+              </div>
+            </IntlClientProvider>
+          </LocaleProvider>
         </ThemeProvider>
       </body>
     </html>

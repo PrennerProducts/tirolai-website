@@ -2,8 +2,12 @@
 
 import Link from 'next/link';
 import { Mail, Github, Linkedin } from 'lucide-react';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
+
   return (
     <footer className="bg-[rgba(30,41,59,0.47)] text-muted border-t border-muted/30 backdrop-blur-md p-6">
       {/* 🔹 Dekorative Linie */}
@@ -13,46 +17,53 @@ export default function Footer() {
         {/* 🧠 Brand */}
         <div>
           <h4 className="text-foreground text-lg font-semibold mb-3">
-            Tirol<span className="text-accent">AI</span>
+            {String(t('brand_title'))}
           </h4>
-          <p className="text-muted/80 leading-relaxed">
-            Digitale Intelligenz aus Tirol – <br />
-            KI, Mobile & Web-Lösungen mit Substanz.
+          <p className="text-muted/80 leading-relaxed whitespace-pre-line">
+            {String(t('brand_description'))}
           </p>
         </div>
 
         {/* ⚙️ Leistungen */}
         <div>
-          <h5 className="text-foreground font-medium mb-3">Leistungen</h5>
-          <ul className="space-y-2">
-            {[
-              'Webentwicklung',
-              'Künstliche Intelligenz',
-              'IoT & Embedded',
-              'Mobile Apps',
-            ].map((label, i) => (
-              <li key={i}>
-                <Link
-                  href="#services"
-                  className="hover:text-accent transition-colors"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <h5 className="text-foreground font-medium mb-3">
+            {t('services_title')}
+          </h5>
+          {(() => {
+            const servicesList = t.raw('services_list') as string[];
+            return (
+              <ul className="space-y-2">
+                {Array.isArray(servicesList) && servicesList.length > 0 ? (
+                  servicesList.map((label: string, i: number) => (
+                    <li key={i}>
+                      <Link
+                        href="#services"
+                        className="hover:text-accent transition-colors"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  <li className="text-muted">No services available</li>
+                )}
+              </ul>
+            );
+          })()}
         </div>
 
         {/* 🏢 Unternehmen */}
         <div>
-          <h5 className="text-foreground font-medium mb-3">Unternehmen</h5>
+          <h5 className="text-foreground font-medium mb-3">
+            {t('company_title')}
+          </h5>
           <ul className="space-y-2">
             <li>
               <Link
                 href="/about"
                 className="hover:text-accent transition-colors"
               >
-                Über uns
+                {t('company_about')}
               </Link>
             </li>
             <li>
@@ -60,7 +71,7 @@ export default function Footer() {
                 href="/#contact"
                 className="hover:text-accent transition-colors"
               >
-                Kontakt
+                {t('company_contact')}
               </Link>
             </li>
           </ul>
@@ -68,14 +79,16 @@ export default function Footer() {
 
         {/* ⚖️ Rechtliches */}
         <div>
-          <h5 className="text-foreground font-medium mb-3">Rechtliches</h5>
+          <h5 className="text-foreground font-medium mb-3">
+            {t('legal_title')}
+          </h5>
           <ul className="space-y-2">
             <li>
               <Link
                 href="/impressum"
                 className="hover:text-accent transition-colors"
               >
-                Impressum
+                {t('legal_imprint')}
               </Link>
             </li>
             <li>
@@ -83,7 +96,7 @@ export default function Footer() {
                 href="/datenschutz"
                 className="hover:text-accent transition-colors"
               >
-                Datenschutz
+                {t('legal_privacy')}
               </Link>
             </li>
           </ul>
@@ -119,6 +132,10 @@ export default function Footer() {
           >
             <Github size={16} />
           </Link>
+          <div className="flex items-center space-x-2">
+            <span>{t('language_switcher_label')}:</span>
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </footer>

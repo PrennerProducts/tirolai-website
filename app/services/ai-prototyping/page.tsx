@@ -1,32 +1,28 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI-Prototyping | TirolAI',
-  description:
-    'Schnelle KI-Prototypen für Ihr Unternehmen – fix kalkuliert, praxisnah und förderfähig.',
+  title: 'services.ai_prototyping.title',
+  description: 'services.ai_prototyping.text',
 };
 
-export default function Page() {
+export default function AiPrototypingPage() {
+  const t = useTranslations('services.ai_prototyping');
+
   return (
     <main className="max-w-4xl mx-auto py-25 px-6">
-      <h1 className="text-4xl font-bold mb-8">AI-Prototyping</h1>
-      <p className="mb-4">
-        Sie möchten KI im Unternehmen einsetzen, aber nicht blind investieren?
-        Mit unserem AI-Prototyping-Package entwickeln wir innerhalb weniger
-        Wochen einen ersten funktionsfähigen Prototyp.
-      </p>
-      <p className="mb-4">
-        So können Sie reale Ergebnisse testen und fundiert über weitere
-        Investitionen entscheiden. Das Prototyping eignet sich auch hervorragend
-        für Förderprojekte.
-      </p>
-      <h2 className="text-2xl font-semibold mt-8 mb-4">Typische Prototypen:</h2>
+      <h1 className="text-4xl font-bold mb-8">{t('title')}</h1>
+      <p className="mb-4">{t('paragraph1')}</p>
+      <p className="mb-4">{t('paragraph2')}</p>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">{t('scope_title')}</h2>
       <ul className="list-disc list-inside mb-8">
-        <li>Chatbots & virtuelle Assistenten</li>
-        <li>OCR & Dokumentenverarbeitung</li>
-        <li>Forecasting & Absatzprognosen</li>
-        <li>Anomalieerkennung in Produktion & Logistik</li>
-        <li>Qualitätskontrolle per Bilderkennung</li>
+        <li>{t('scope_item1')}</li>
+        <li>{t('scope_item2')}</li>
+        <li>{t('scope_item3')}</li>
+        <li>{t('scope_item4')}</li>
+        <li>{t('scope_item5')}</li>
       </ul>
     </main>
   );

@@ -1,0 +1,118 @@
+[
+  {
+    "slug": "tensionterminator",
+    "title": "TensionTerminator – Real-time Motion Analysis for Therapy & Prevention",
+    "industry": "Digital Health / Physiotherapy / Motion Analysis",
+    "summary": "AI-powered web application for precise measurement of posture, range of motion (ROM), and muscle tension – directly in the browser without additional hardware.",
+    "image": "/images/laptoptt.png",
+    "challenge": "Manual collection and documentation of mobility, posture, and muscle tension is error-prone, time-consuming, and difficult to standardize – especially in dynamic therapy settings.",
+    "solution": "Browser-based application with automatic face recognition, AI-supported posture analysis, and ROM angle calculation. Includes digital patient management, progress tracking, and PDF export for medical documentation.",
+    "result": "Reduction of recording and documentation effort by up to 90%. Standardized motion analysis in under 60 seconds per patient. Intuitive use on any device without app installation.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "Vercel",
+      "PostgreSQL",
+      "TensorFlow.js",
+      "pdf-lib",
+      "html2canvas",
+      "Tailwind CSS"
+    ],
+    "link": "https://evaluierung.ergophysion.com/"
+  },
+  {
+    "slug": "fechtsport-analytik",
+    "title": "FIE Data Analysis on Handedness in Fencing",
+    "industry": "Sports Science / Neuroscience / Data Science",
+    "summary": "Automated collection and analysis of over 400,000 international fencing matches to study the impact of left-handedness in competitive sports.",
+    "image": "/images/FIE.png",
+    "challenge": "A neuroscience research study at the University of Trento required large-scale, reliable data on international fencing matches including handedness and world ranking. Manual collection was error-prone and time-consuming.",
+    "solution": "Development of a modular Python crawler with automated extraction and enrichment of match data (2004–2024) from the FIE website. Supplemented with handedness detection, ranking data, and structured CSV exports for statistical analysis.",
+    "result": "Over 400,000 matches processed automatically and enriched with metadata such as handedness, gender, nation, and ranking. Basis for high-resolution analysis of whether left-handers have a systematic advantage in fencing. Significant reduction in manual effort and improved scientific data quality.",
+    "technologies": [
+      "Python",
+      "Playwright",
+      "Pandas",
+      "Regex",
+      "BeautifulSoup",
+      "CSV",
+      "Data Mapping",
+      "Data Enrichment",
+      "Web Scraping"
+    ]
+  },
+  {
+    "slug": "optical-flow-tracking",
+    "title": "Optical Flow & Object Tracking in Video Sequences",
+    "industry": "Computer Vision / Video Analysis",
+    "summary": "Tracking of objects in video sequences using classical methods: Lucas-Kanade (Sparse Optical Flow) and Farnebäck (Dense Optical Flow).",
+    "image": "/images/opticalFlow.png",
+    "challenge": "In industrial, medical, or sports applications, moving objects need to be reliably tracked – robust against occlusions, camera movement, and without deep learning.",
+    "solution": "Implementation of two proven optical flow methods:\n1. Lucas-Kanade (sparse): tracks distinctive points across frames using local gradient estimation.\n2. Farnebäck (dense): calculates motion vectors for each pixel using polynomial approximation.\n\nAlso: visualization using HSV color space (direction as hue, magnitude as brightness) and bounding box tracking by forwarding point trajectories.",
+    "result": "A robust, dataset-free tracking workflow, ideal for resource-constrained systems. Visualization of motion direction by color coding, reliable real-time tracking, and modular use in machine vision or sports analysis.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Jupyter Notebook",
+      "Lucas-Kanade Optical Flow",
+      "Farnebäck Optical Flow"
+    ]
+  },
+  {
+    "slug": "3d-rekonstruktion",
+    "title": "3D Reconstruction with OpenCV and Numpy",
+    "industry": "Computer Vision / Image Processing",
+    "summary": "Analysis workflow for 3D reconstruction of objects from 2D images, with feature matching and depth estimation.",
+    "image": "/images/3drecon.png",
+    "challenge": "Reconstruct a geometrically correct 3D impression of an object from multiple 2D images – without special hardware.",
+    "solution": "Implementation of a structured OpenCV workflow with feature detection, epipolar geometry, depth calculation, and visualization of reconstruction points.",
+    "result": "Successful reconstruction based on real image data, with interactive visualization and reproducible code.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Pillow",
+      "Scipy",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "slug": "feature-extraction-segmentation",
+    "title": "Feature Extraction & Image Segmentation",
+    "industry": "Computer Vision / Image Analysis",
+    "summary": "Analysis pipeline for extracting significant image features and segmenting relevant regions using thresholding and morphology.",
+    "image": "/images/featureEx.png",
+    "challenge": "Goal was to extract robust features from complex image data for downstream analyses (e.g., classification).",
+    "solution": "Stepwise CV pipeline with histogram analysis, edge detection, thresholding, morphological operations, and segmentation based on geometric features.",
+    "result": "Reliable extraction and separation of image regions – prepared for further processing steps like object detection or quantification.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Scipy",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "slug": "bildverarbeitung-grundlagen",
+    "title": "Image Processing with Python & OpenCV",
+    "industry": "Computer Vision / Image Analysis",
+    "summary": "Introduction to fundamental image processing operations – from filtering to edge and feature extraction to visualization.",
+    "image": "/images/bildverarbeitung.png",
+    "challenge": "Goal was to develop a solid understanding of basic image processing operations – without high-level APIs or deep learning.",
+    "solution": "Implementation of core methods like smoothing, edge detection, thresholding, and color channel analysis with OpenCV and Numpy.",
+    "result": "A reproducible analysis pipeline for preparing image data – ideal for later steps like tracking, segmentation, or classification.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Jupyter Notebook"
+    ]
+  }
+]

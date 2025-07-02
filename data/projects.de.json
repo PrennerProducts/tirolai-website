@@ -1,0 +1,118 @@
+[
+  {
+    "slug": "tensionterminator",
+    "title": "TensionTerminator – Echtzeit-Bewegungsanalyse für Therapie & Prävention",
+    "industry": "Digital Health / Physiotherapie / Bewegungsanalyse",
+    "summary": "KI-gestützte Webanwendung zur präzisen Erfassung von Haltung, Beweglichkeit (ROM) und muskulären Spannungen – direkt im Browser, ohne zusätzliche Hardware.",
+    "image": "/images/laptoptt.png",
+    "challenge": "Die manuelle Erhebung und Dokumentation von Beweglichkeit, Haltung und muskulärer Spannung ist fehleranfällig, zeitintensiv und schwer standardisierbar – insbesondere in dynamischen Therapiesettings.",
+    "solution": "Browserbasierte Anwendung mit automatischer Gesichtserkennung, KI-gestützter Haltungsanalyse und ROM-Winkelberechnung. Inklusive digitalem Patientenmanagement, Verlaufsprotokollen und PDF-Export für medizinische Dokumentation.",
+    "result": "Reduktion des Erfassungs- und Dokumentationsaufwands um bis zu 90 %. Standardisierte Bewegungsanalyse in unter 60 Sekunden pro Patient:in. Intuitive Nutzung auf jedem Endgerät ohne App-Installation.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "Vercel",
+      "PostgreSQL",
+      "TensorFlow.js",
+      "pdf-lib",
+      "html2canvas",
+      "Tailwind CSS"
+    ],
+    "link": "https://evaluierung.ergophysion.com/"
+  },
+  {
+    "slug": "fechtsport-analytik",
+    "title": "FIE-Datenanalyse zur Händigkeit im Fechtsport",
+    "industry": "Sportwissenschaft / Neurowissenschaft / Data Science",
+    "summary": "Automatisierte Erhebung und Analyse von über 400.000 internationalen Fechtmatches zur Erforschung der Auswirkungen von Linkshändigkeit im Leistungssport.",
+    "image": "/images/FIE.png",
+    "challenge": "Für eine neurowissenschaftliche Forschungsstudie an der Universität Trento wurden großflächige, verlässliche Daten zu internationalen Fechtmatches samt Händigkeit und Weltranglistenplatz benötigt. Die manuelle Erhebung war fehleranfällig und zeitlich nicht realisierbar.",
+    "solution": "Entwicklung eines modularen Python-Crawlers mit automatisierter Extraktion und Anreicherung von Matchdaten (2004–2024) aus der FIE-Website. Ergänzt durch Händigkeitserkennung, Weltranglistendaten und strukturierte CSV-Exports für statistische Auswertungen.",
+    "result": "Über 400.000 Matches automatisiert verarbeitet und mit Metadaten wie Händigkeit, Geschlecht, Nation und Ranking angereichert. Grundlage für eine hochauflösende Analyse der Frage, ob Linkshänder im Fechtsport einen systematischen Vorteil haben. Deutliche Reduktion manueller Aufwände und erhöhte wissenschaftliche Datenqualität.",
+    "technologies": [
+      "Python",
+      "Playwright",
+      "Pandas",
+      "Regex",
+      "BeautifulSoup",
+      "CSV",
+      "Data Mapping",
+      "Data Enrichment",
+      "Web Scraping"
+    ]
+  },
+  {
+    "slug": "optical-flow-tracking",
+    "title": "Optical Flow & Objektverfolgung in Videosequenzen",
+    "industry": "Computer Vision / Videoanalyse",
+    "summary": "Tracking von Objekten in Videosequenzen mit klassischen Verfahren: Lucas-Kanade (Sparse Optical Flow) und Farnebäck (Dense Optical Flow).",
+    "image": "/images/opticalFlow.png",
+    "challenge": "In industriellen, medizinischen oder sportlichen Anwendungen sollen bewegte Objekte zuverlässig verfolgt werden – robust gegen Verdeckungen, Kamerabewegung und ohne Deep Learning.",
+    "solution": "Implementierung zweier bewährter Optical-Flow-Methoden:\n1. Lucas-Kanade (sparse): verfolgt markante Punkte über Frames hinweg durch lokale Gradientenabschätzung.\n2. Farnebäck (dense): berechnet Bewegungsvektoren für jedes Pixel über eine polynomiale Approximation.\n\nZudem: Visualisierung per HSV-Farbraum (Richtung als Farbton, Stärke als Helligkeit) und Bounding-Box-Tracking durch Weiterleitung der Punktverläufe.",
+    "result": "Ein robuster, datensatzfreier Tracking-Workflow, ideal für ressourcenarme Systeme. Visualisierung der Bewegungsrichtung durch Farbcodierung, zuverlässige Verfolgung in Echtzeit und modular einsetzbar z. B. in Maschinenvision oder Sportanalyse.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Jupyter Notebook",
+      "Lucas-Kanade Optical Flow",
+      "Farnebäck Optical Flow"
+    ]
+  },
+  {
+    "slug": "3d-rekonstruktion",
+    "title": "3D-Rekonstruktion mit OpenCV und Numpy",
+    "industry": "Computer Vision / Bildverarbeitung",
+    "summary": "Analyse-Workflow zur 3D-Rekonstruktion von Objekten anhand von 2D-Bildern, mit Feature-Matching und Tiefenschätzung.",
+    "image": "/images/3drecon.png",
+    "challenge": "Aus mehreren 2D-Bildern soll ein geometrisch korrekter 3D-Eindruck des Objekts rekonstruiert werden – ohne Spezialhardware.",
+    "solution": "Implementierung eines strukturierten OpenCV-Workflows mit Feature Detection, Epipolargeometrie, Tiefenberechnung und Visualisierung der Rekonstruktionspunkte.",
+    "result": "Erfolgreiche Rekonstruktion auf Basis realer Bilddaten, mit interaktiver Visualisierung und reproduzierbarem Code.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Pillow",
+      "Scipy",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "slug": "feature-extraction-segmentation",
+    "title": "Feature-Extraktion & Bildsegmentierung",
+    "industry": "Computer Vision / Bildanalyse",
+    "summary": "Analysepipeline zur Extraktion signifikanter Bildmerkmale und Segmentierung relevanter Regionen mittels Schwellenwerten und Morphologie.",
+    "image": "/images/featureEx.png",
+    "challenge": "Ziel war es, aus komplexen Bilddaten robuste Merkmale zu extrahieren, um diese für nachgelagerte Analysen (z. B. Klassifikation) nutzbar zu machen.",
+    "solution": "Schrittweise CV-Pipeline mit Histogramm-Analyse, Kantendetektion, Schwellenwertverfahren, Morphologischen Operationen und Segmentierung auf Basis geometrischer Merkmale.",
+    "result": "Zuverlässige Extraktion und Trennung von Bildbereichen – vorbereitet für weiterführende Verarbeitungsschritte wie Objekterkennung oder Quantifizierung.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Scipy",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "slug": "bildverarbeitung-grundlagen",
+    "title": "Bildverarbeitung mit Python & OpenCV",
+    "industry": "Computer Vision / Bildanalyse",
+    "summary": "Einführung in grundlegende Operationen der Bildverarbeitung – von Filterung über Kanten- und Merkmalsextraktion bis zur Visualisierung.",
+    "image": "/images/bildverarbeitung.png",
+    "challenge": "Ziel war es, ein fundiertes Verständnis für grundlegende Bildverarbeitungsoperationen zu entwickeln – ohne High-Level-APIs oder Deep Learning.",
+    "solution": "Implementierung zentraler Methoden wie Glättung, Kantendetektion, Schwellenwertverfahren und Farbkanalanalyse mit OpenCV und Numpy.",
+    "result": "Eine reproduzierbare Analysepipeline zur Vorbereitung von Bilddaten – ideal für spätere Schritte wie Tracking, Segmentierung oder Klassifikation.",
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Numpy",
+      "Matplotlib",
+      "Jupyter Notebook"
+    ]
+  }
+]

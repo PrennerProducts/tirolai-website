@@ -1,0 +1,93 @@
+{
+  "hello": "Hallo",
+  "welcome": "Willkommen auf unserer Webseite!",
+  "leistungen": "Leistungen",
+  "referenzen": "Referenzen",
+  "ueber_uns": "Über uns",
+  "jetzt_beraten_lassen": "Jetzt beraten lassen",
+  "mehr_erfahren": "Mehr erfahren →",
+
+  "digitale_intelligenz": "Digitale Intelligenz aus Tirol.",
+  "beschreibung": "Wir entwickeln smarte Web- & KI-Lösungen für Unternehmen, die vorausdenken.",
+  "about_title": "Über uns",
+  "about_welcome": "Willkommen bei TirolAI – wo aus Ideen skalierbare, intelligente Softwarelösungen entstehen. Unser Team bringt Perspektiven aus Nord- und Südtirol zusammen und arbeitet grenzüberschreitend daran, digitale Innovation praxisnah und verantwortungsvoll voranzutreiben.",
+  "about_competencies": "Unsere Kompetenzen vereinen Künstliche Intelligenz, Internet of Things und moderne Webentwicklung. Wir entwickeln Technologien mit echtem Mehrwert – integriert, anwenderorientiert und zukunftsfähig.",
+  "about_vision_title": "Unsere Vision",
+  "about_vision_text": "Wir sind überzeugt: Intelligente Systeme sollten konkrete Probleme lösen – nicht Trends hinterherlaufen. TirolAI steht für verständliche, modulare und transparente Technologie. Unser Ziel ist es, AI und IoT nicht nur großen Unternehmen, sondern auch Startups, KMU und Organisationen in Tirol zugänglich zu machen.",
+  "about_think_ahead": "Wir denken nicht nur mit – wir denken voraus. Gemeinsam mit unseren Kund:innen gestalten wir digitale Werkzeuge, die Prozesse vereinfachen, Entscheidungen unterstützen und nachhaltige Mehrwerte schaffen.",
+  "about_team_title": "Unser Team",
+  "about_martin_name": "Martin Seppi",
+  "about_martin_role": "Machine Learning Engineer",
+  "about_martin_desc": "BSc in Software Engineering, aktuell MSc Artificial Intelligence. Martin ist unser Machine-Learning-Spezialist mit Fokus auf Reinforcement Learning, modellbasierte KI und datengetriebene Systeme. Er bringt tiefes Verständnis für Backend-Entwicklung, API-Design, Datenbanken und skalierbare Systemarchitekturen mit – und sorgt dafür, dass auch komplexe KI-Systeme performant und robust in produktiven Anwendungen laufen.",
+  "about_lukas_name": "Lukas Prenner",
+  "about_lukas_role": "Fullstack AI & IoT Developer",
+  "about_lukas_desc": "BSc in Software Engineering, derzeit MSc-Studium in Artificial Intelligence. Bringt fundierte Erfahrung in moderner Webentwicklung (Frontend & Backend), UI/UX-Design, DevOps und der Integration von KI-Systemen in skalierbare Webplattformen mit. Darüber hinaus war er aktiv an Forschungsprojekten im Bereich IoT-Security beteiligt und verfügt über tiefgehendes Wissen in IT-Sicherheit und Embedded-Systemen.",
+  "about_robert_name": "Robert Gollner",
+  "about_robert_role": "SAP & AI Engineer",
+  "about_robert_desc": "BSc in Software Engineering, aktuell MSc-Studium in Artificial Intelligence. Robert bringt fundierte Erfahrung aus internationalen Unternehmen mit, in denen er an der Entwicklung und Optimierung von ERP-Systemen gearbeitet hat – insbesondere im SAP-Umfeld. Sein Schwerpunkt liegt auf der Integration von SAP mit modernen Webtechnologien und KI, um Geschäftsprozesse intelligent zu automatisieren. Spezialisiert auf smarte Schnittstellen, skalierbare Architekturen und effiziente, zukunftsorientierte Systemlösungen.",
+  "about_qualities_title": "Was uns auszeichnet",
+  "about_qualities_list": [
+    "Hands-on Mentalität & Startup-Speed",
+    "Verständnis für technische Tiefe UND Nutzerbedürfnisse",
+    "Offene Kommunikation auf Augenhöhe",
+    "Agile Entwicklung und modulare Systemarchitektur",
+    "Leidenschaft für Qualität, Sicherheit & UX"
+  ],
+  "about_mission_title": "Unsere Mission",
+  "about_mission_text": "Wir wollen Tirol – von Nord bis Süd – zu einem Ort machen, an dem moderne Technologie nicht hinterherhinkt, sondern vorausgeht. TirolAI ist die Schnittstelle zwischen kreativen Ideen und technologischer Umsetzung. Egal ob Pilotprojekt oder Fullstack-System: Wir begleiten euch vom ersten Konzept bis zur finalen Implementierung – praxisnah, grenzüberschreitend und zukunftssicher.",
+  "about_belief": "Wir glauben an Technologie, die inspiriert – und an Zusammenarbeit, die begeistert.",
+  "services": {
+    "title": "Unsere Leistungen",
+    "ki_potenzialanalyse": {
+      "title": "KI-Potenzialanalyse",
+      "text": "Wir analysieren Prozesse und identifizieren sinnvolle KI-Anwendungen."
+    },
+    "ai_prototyping": {
+      "title": "AI-Prototyping",
+      "text": "Schnelle KI-Prototypen für Chatbots, Forecasts, OCR & Co."
+    },
+    "ai_agents": {
+      "title": "AI Agents & Co-Piloten",
+      "text": "Entwicklung intelligenter Agents auf Basis von LLMs & RAG."
+    },
+    "prozessautomatisierung": {
+      "title": "Prozessautomatisierung",
+      "text": "Backoffice, Buchhaltung und HR automatisieren mit RPA & Workflows."
+    },
+    "web_app_entwicklung": {
+      "title": "Web- & App-Entwicklung",
+      "text": "Digitale Plattformen, Kundenportale & Apps mit KI-Integration."
+    },
+    "iot_predictive": {
+      "title": "IoT & Predictive Solutions",
+      "text": "Maschinendaten für Predictive Maintenance & Industrie 4.0 nutzen."
+    },
+    "ai_schulungen": {
+      "title": "AI-Schulungen",
+      "text": "Mitarbeiter fit für KI & sichere AI-Nutzung machen."
+    },
+    "foerderberatung": {
+      "title": "Förderberatung",
+      "text": "Förderungen bei aws, FFG & Land Tirol optimal nutzen."
+    },
+    "learn_more": "Mehr erfahren →"
+  },
+  "footer": {
+    "brand_title": "TirolAI",
+    "brand_description": "Digitale Intelligenz aus Tirol – KI, Mobile & Web-Lösungen mit Substanz.",
+    "services_title": "Leistungen",
+    "services_list": [
+      "Webentwicklung",
+      "Künstliche Intelligenz",
+      "IoT & Embedded",
+      "Mobile Apps"
+    ],
+    "company_title": "Unternehmen",
+    "company_about": "Über uns",
+    "company_contact": "Kontakt",
+    "legal_title": "Rechtliches",
+    "legal_imprint": "Impressum",
+    "legal_privacy": "Datenschutz",
+    "language_switcher_label": "Sprache"
+  }
+}

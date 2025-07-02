@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedLogo from './AnimateLogo';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations();
   const [flash, setFlash] = useState(false);
   const [layoutReady, setLayoutReady] = useState(false);
   const [showText, setShowText] = useState(false);
@@ -74,13 +76,11 @@ export default function Hero() {
                 transition={{ duration: 1.2, ease: 'easeOut' }}
                 className="w-full md:w-[48%] bg-surface/80 backdrop-blur-md border border-muted p-10 rounded-3xl shadow-xl"
               >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-foreground">
-                  Digitale Intelligenz
-                  <br className="hidden sm:block" /> aus Tirol.
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-foreground whitespace-pre-line">
+                  {t('digitale_intelligenz')}
                 </h1>
                 <p className="mt-6 text-lg sm:text-xl leading-relaxed text-muted max-w-xl">
-                  Wir entwickeln smarte Web- & KI-Lösungen für Unternehmen, die
-                  vorausdenken.
+                  {t('beschreibung')}
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row sm:justify-start justify-center items-center gap-4 sm:gap-x-6">
                   <Button variant="cyan" asChild>

@@ -8,11 +8,13 @@ export default function ServiceCard({
   title,
   text,
   href,
+  learnMoreText,
 }: {
   icon: React.ReactNode;
   title: string;
   text: string;
   href: string;
+  learnMoreText?: string;
 }) {
   return (
     <Link
@@ -28,7 +30,7 @@ export default function ServiceCard({
       </h3>
       <p className="text-muted">{text}</p>
       <div className="mt-6 text-sm font-medium text-accent group-hover:underline">
-        Mehr erfahren →
+        {learnMoreText}
       </div>
     </Link>
   );

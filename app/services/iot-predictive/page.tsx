@@ -1,32 +1,28 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IoT & Predictive Solutions | TirolAI',
-  description:
-    'Maschinendaten intelligent nutzen – Predictive Maintenance & Industrie 4.0',
+  title: 'services.iot_predictive.title',
+  description: 'services.iot_predictive.text',
 };
 
-export default function Page() {
+export default function IotPredictivePage() {
+  const t = useTranslations('services.iot_predictive');
+
   return (
     <main className="max-w-4xl mx-auto py-25 px-6">
-      <h1 className="text-4xl font-bold mb-8">IoT & Predictive Solutions</h1>
-      <p className="mb-4">
-        Viele Industriebetriebe sammeln heute bereits Maschinendaten — doch nur
-        wenige nutzen diese auch intelligent.
-      </p>
-      <p className="mb-4">
-        Wir helfen, IoT-Daten mit KI-Methoden zu analysieren, Ausfälle
-        frühzeitig zu erkennen und Produktionsprozesse zu optimieren. Predictive
-        Maintenance spart Kosten, reduziert Stillstände und erhöht die
-        Effizienz.
-      </p>
-      <h2 className="text-2xl font-semibold mt-8 mb-4">Unsere Leistungen:</h2>
+      <h1 className="text-4xl font-bold mb-8">{t('title')}</h1>
+      <p className="mb-4">{t('paragraph1')}</p>
+      <p className="mb-4">{t('paragraph2')}</p>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">{t('scope_title')}</h2>
       <ul className="list-disc list-inside mb-8">
-        <li>Sensoranbindung & Datenintegration</li>
-        <li>Anomalieerkennung & Predictive Maintenance Modelle</li>
-        <li>Datenplattformen & Dashboards</li>
-        <li>Integration in bestehende ERP/MES-Systeme</li>
-        <li>IoT-Security Audits</li>
+        <li>{t('scope_item1')}</li>
+        <li>{t('scope_item2')}</li>
+        <li>{t('scope_item3')}</li>
+        <li>{t('scope_item4')}</li>
+        <li>{t('scope_item5')}</li>
       </ul>
     </main>
   );

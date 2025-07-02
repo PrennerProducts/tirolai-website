@@ -1,0 +1,95 @@
+{
+  "digitale_intelligenz": "Digital Intelligence\nfrom Tyrol.",
+  "beschreibung": "We develop smart web & AI solutions for companies that think ahead.",
+  "jetzt_beraten_lassen": "Get advice now",
+  "mehr_erfahren": "Learn more →",
+  "leistungen": "Services",
+  "referenzen": "References",
+  "ueber_uns": "About us",
+  "hello": "Hello",
+  "welcome": "Welcome to our website!",
+
+  "footer": {
+    "brand_title": "TirolAI",
+    "brand_description": "Digital Intelligence from Tyrol –\nAI, Mobile & Web solutions with substance.",
+    "services_title": "Services",
+    "services_list": [
+      "Web Development",
+      "Artificial Intelligence",
+      "IoT & Embedded",
+      "Mobile Apps"
+    ],
+    "company_title": "Company",
+    "company_about": "About us",
+    "company_contact": "Contact",
+    "legal_title": "Legal",
+    "legal_imprint": "Imprint",
+    "legal_privacy": "Privacy Policy",
+    "language_switcher_label": "Language"
+  },
+
+  "about_title": "About us",
+  "about_welcome": "Welcome to TirolAI – where ideas become scalable, intelligent software solutions. Our team brings perspectives from North and South Tyrol together, working cross-border to advance digital innovation practically and responsibly.",
+  "about_competencies": "Our competencies combine Artificial Intelligence, Internet of Things, and modern web development. We develop technologies with real added value – integrated, user-oriented, and future-proof.",
+  "about_vision_title": "Our Vision",
+  "about_vision_text": "We believe intelligent systems should solve concrete problems – not chase trends. TirolAI stands for understandable, modular, and transparent technology. Our goal is to make AI and IoT accessible not only to large companies but also to startups, SMEs, and organizations in Tyrol.",
+  "about_think_ahead": "We don't just think along – we think ahead. Together with our clients, we design digital tools that simplify processes, support decisions, and create sustainable added value.",
+  "about_team_title": "Our Team",
+  "about_martin_name": "Martin Seppi",
+  "about_martin_role": "Machine Learning Engineer",
+  "about_martin_desc": "BSc in Software Engineering, currently MSc in Artificial Intelligence. Martin is our machine learning specialist focusing on reinforcement learning, model-based AI, and data-driven systems. He brings deep understanding of backend development, API design, databases, and scalable system architectures – ensuring complex AI systems run performant and robust in production.",
+  "about_lukas_name": "Lukas Prenner",
+  "about_lukas_role": "Fullstack AI & IoT Developer",
+  "about_lukas_desc": "BSc in Software Engineering, currently MSc in Artificial Intelligence. Experienced in modern web development (frontend & backend), UI/UX design, DevOps, and integrating AI systems into scalable web platforms. Also active in IoT security research with deep knowledge in IT security and embedded systems.",
+  "about_robert_name": "Robert Gollner",
+  "about_robert_role": "SAP & AI Engineer",
+  "about_robert_desc": "BSc in Software Engineering, currently MSc in Artificial Intelligence. Robert has experience in international companies developing and optimizing ERP systems, especially SAP. Focused on integrating SAP with modern web technologies and AI to automate business processes intelligently. Specialized on smart interfaces, scalable architectures, and efficient, future-proof system solutions.",
+  "about_qualities_title": "What sets us apart",
+  "about_qualities_list": [
+    "Hands-on mentality & startup speed",
+    "Understanding of technical depth AND user needs",
+    "Open communication at eye level",
+    "Agile development and modular system architecture",
+    "Passion for quality, security & UX"
+  ],
+  "about_mission_title": "Our Mission",
+  "about_mission_text": "We want Tyrol – from North to South – to be a place where modern technology does not lag behind but leads. TirolAI is the interface between creative ideas and technological implementation. Whether pilot project or fullstack system: we accompany you from the first concept to final implementation – practical, cross-border, and future-proof.",
+  "about_belief": "We believe in technology that inspires – and collaboration that excites.",
+
+  "services": {
+    "title": "Our Services",
+    "ki_potenzialanalyse": {
+      "title": "AI Potential Analysis",
+      "text": "We analyze processes and identify meaningful AI applications."
+    },
+    "ai_prototyping": {
+      "title": "AI Prototyping",
+      "text": "Rapid AI prototypes for chatbots, forecasts, OCR & more."
+    },
+    "ai_agents": {
+      "title": "AI Agents & Co-Pilots",
+      "text": "Development of intelligent agents based on LLMs & RAG."
+    },
+    "prozessautomatisierung": {
+      "title": "Process Automation",
+      "text": "Automate back office, accounting, and HR with RPA & workflows."
+    },
+    "web_app_entwicklung": {
+      "title": "Web & App Development",
+      "text": "Digital platforms, customer portals & apps with AI integration."
+    },
+    "iot_predictive": {
+      "title": "IoT & Predictive Solutions",
+      "text": "Use machine data for predictive maintenance & Industry 4.0."
+    },
+    "ai_schulungen": {
+      "title": "AI Training",
+      "text": "Train employees for AI & safe AI usage."
+    },
+    "foerderberatung": {
+      "title": "Funding Consulting",
+      "text": "Optimize funding from aws, FFG & Land Tirol."
+    },
+    "learn_more": "Learn more →"
+  }
+}

@@ -14,6 +14,10 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 import useIsScrolled from '@/hooks/useIsScrolled';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
+/* Removed unused import to fix eslint error */
+//// import { useLocaleContext } from '@/app/locale-context';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,9 +32,13 @@ export default function Nav() {
   const isScrolled = useIsScrolled();
   const showSolidNav = !isHomepage || isScrolled || isMobile || mobileOpen;
 
+  // Removed unused locale and setLocale to fix eslint errors
+  // const { locale, setLocale } = useLocaleContext();
+  const t = useTranslations();
+
   useEffect(() => {
-    const t = setTimeout(() => setShowNav(true), 3500);
-    return () => clearTimeout(t);
+    const timer = setTimeout(() => setShowNav(true), 3500);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -123,7 +131,7 @@ export default function Nav() {
                     pathname.startsWith('/services') ? 'text-accent' : ''
                   }`}
                 >
-                  Leistungen
+                  {t('leistungen')}
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -136,7 +144,7 @@ export default function Nav() {
                     pathname === '/references' ? 'text-accent' : ''
                   }`}
                 >
-                  Referenzen
+                  {t('referenzen')}
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -149,7 +157,7 @@ export default function Nav() {
                     pathname === '/about' ? 'text-accent' : ''
                   }`}
                 >
-                  Über uns
+                  {t('ueber_uns')}
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -157,14 +165,15 @@ export default function Nav() {
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link href="/#contact">
-                  <Button variant="cyan">Jetzt beraten lassen</Button>
+                  <Button variant="cyan">{t('jetzt_beraten_lassen')}</Button>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
 
-          <div className="ml-4">
+          <div className="ml-4 flex items-center space-x-2">
             <ThemeToggle />
+            <LanguageSwitcher />
           </div>
         </NavigationMenu>
 
@@ -192,7 +201,7 @@ export default function Nav() {
               onClick={() => setMobileOpen(false)}
               className="text-foreground"
             >
-              Leistungen
+              {t('leistungen')}
             </Link>
 
             <Link
@@ -200,19 +209,17 @@ export default function Nav() {
               onClick={() => setMobileOpen(false)}
               className="text-foreground"
             >
-              Referenzen
+              {t('referenzen')}
             </Link>
             <Link
               href="/about"
               onClick={() => setMobileOpen(false)}
               className="text-foreground"
             >
-              Über uns
+              {t('ueber_uns')}
             </Link>
             <Link href="/#contact" onClick={() => setMobileOpen(false)}>
-              <Button variant="cyan" className="w-full">
-                Jetzt beraten lassen
-              </Button>
+              <Button variant="cyan">{t('jetzt_beraten_lassen')}</Button>
             </Link>
             <div className="pt-4 flex justify-center">
               <ThemeToggle />
