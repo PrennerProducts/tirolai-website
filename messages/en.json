@@ -60,35 +60,99 @@
     "title": "Our Services",
     "ki_potenzialanalyse": {
       "title": "AI Potential Analysis",
-      "text": "We analyze your processes and identify meaningful AI use cases."
+      "text": "We analyze your processes and identify meaningful AI use cases.",
+      "paragraph1": "Many companies know that artificial intelligence offers enormous potential — but where to start concretely?",
+      "paragraph2": "In our AI potential workshop, we analyze your processes, data, and goals together.",
+      "scope_title": "Scope of services:",
+      "scope_item1": "Process analysis & use case mapping",
+      "scope_item2": "Check data availability and quality",
+      "scope_item3": "Economic feasibility study",
+      "scope_item4": "Funding check & consulting",
+      "scope_item5": "Roadmap for next steps"
     },
     "ai_prototyping": {
       "title": "AI Prototyping",
-      "text": "Quick prototypes for chatbots, forecasting, OCR and more."
+      "text": "Quick prototypes for chatbots, forecasting, OCR and more.",
+      "paragraph1": "AI prototyping allows you to test ideas quickly without committing to full-scale development.",
+      "paragraph2": "We implement concrete use cases like chatbots, image recognition, or prediction models rapidly and pragmatically – using real data if needed.",
+      "scope_title": "Typical applications:",
+      "scope_item1": "Chatbots & virtual assistants",
+      "scope_item2": "OCR & document processing",
+      "scope_item3": "Forecasting & sales predictions",
+      "scope_item4": "Anomaly detection in production & logistics",
+      "scope_item5": "Quality control via image recognition"
     },
     "ai_agents": {
       "title": "AI Agents & Co-Pilots",
-      "text": "Intelligent agents powered by LLMs & retrieval-augmented generation (RAG)."
+      "text": "Intelligent agents powered by LLMs & retrieval-augmented generation (RAG).",
+      "paragraph1": "LLM-based agents can understand, reason, and respond to individual queries using your internal knowledge.",
+      "paragraph2": "We build smart co-pilots and chat systems that access your data, analyze documents, or assist with decision-making.",
+      "scope_title": "Example use cases:",
+      "scope_item1": "Conversational agents & chatbots (e.g., for customer support & HR)",
+      "scope_item2": "Search internal knowledge bases with natural language",
+      "scope_item3": "Document analysis & automated summaries",
+      "scope_item4": "AI co-pilots for departments (e.g., legal, medical, technical)",
+      "scope_item5": "LLM-based API integration for complex automations"
     },
     "prozessautomatisierung": {
       "title": "Process Automation",
-      "text": "Automate back office, accounting & HR using RPA and smart workflows."
+      "text": "Automate back office, accounting & HR using RPA and smart workflows.",
+      "paragraph1": "Repetitive manual tasks are time-consuming and error-prone.",
+      "paragraph2": "With robotic process automation (RPA) and smart workflows, we help you streamline operations and improve efficiency.",
+      "scope_title": "Automatable processes:",
+      "scope_item1": "Automated invoice processing",
+      "scope_item2": "Personnel management & application processes",
+      "scope_item3": "Email & form workflows",
+      "scope_item4": "CRM and ERP interfaces",
+      "scope_item5": "Digital accounting & document management"
     },
     "web_app_entwicklung": {
       "title": "Web & App Development",
-      "text": "Custom platforms, portals & apps with AI integration."
+      "text": "Custom platforms, portals & apps with AI integration.",
+      "paragraph1": "We develop tailored web solutions and mobile apps that integrate seamlessly into your existing systems.",
+      "paragraph2": "From concept to UI/UX and performance – we consider all aspects, including optional AI features.",
+      "scope_title": "Development focus:",
+      "scope_item1": "Customer portals & booking systems",
+      "scope_item2": "Employee dashboards & reporting platforms",
+      "scope_item3": "Production & quality management systems",
+      "scope_item4": "Mobile apps for employees & customers",
+      "scope_item5": "Web applications with integrated AI features"
     },
     "iot_predictive": {
       "title": "IoT & Predictive Solutions",
-      "text": "Leverage machine data for predictive maintenance & Industry 4.0."
+      "text": "Leverage machine data for predictive maintenance & Industry 4.0.",
+      "paragraph1": "We connect IoT devices, collect machine data, and develop data-driven models for predictive maintenance and optimization.",
+      "paragraph2": "Our solutions integrate into existing ERP/MES systems and enable real-time, data-based decision-making.",
+      "scope_title": "Smart IoT components:",
+      "scope_item1": "Sensor connection & data integration",
+      "scope_item2": "Anomaly detection & predictive maintenance models",
+      "scope_item3": "Data platforms & dashboards",
+      "scope_item4": "Integration into existing ERP/MES systems",
+      "scope_item5": "IoT security audits"
     },
     "ai_schulungen": {
       "title": "AI Training",
-      "text": "Empower your team for responsible & efficient AI usage."
+      "text": "Empower your team for responsible & efficient AI usage.",
+      "paragraph1": "Employees may still be skeptical of AI – but with the right knowledge, they can unlock its full productivity potential.",
+      "paragraph2": "We offer hands-on training on GPT, everyday AI tools, data protection, ethics, and effective prompting techniques.",
+      "scope_title": "Training topics:",
+      "scope_item1": "Prompt engineering & effective GPT usage",
+      "scope_item2": "AI tools in daily business",
+      "scope_item3": "Ethics & compliance in AI use",
+      "scope_item4": "Data protection when working with AI",
+      "scope_item5": "Change management & team onboarding"
     },
     "foerderberatung": {
       "title": "Funding Consulting",
-      "text": "Make the most of funding from aws, FFG & the Province of Tyrol."
+      "text": "Make the most of funding from aws, FFG & the Province of Tyrol.",
+      "paragraph1": "Digital innovation projects are eligible for regional, national, and EU funding – but many opportunities go unused.",
+      "paragraph2": "We know the funding landscape (aws, FFG, Province of Tyrol) and support you in applying, documenting, and implementing your project.",
+      "scope_title": "Typical funding programs:",
+      "scope_item1": "aws KMU.Digital",
+      "scope_item2": "FFG Innovation voucher",
+      "scope_item3": "FFG basic program",
+      "scope_item4": "Province of Tyrol digitalization funding",
+      "scope_item5": "EU co-financing"
     },
     "learn_more": "Learn more →"
   }

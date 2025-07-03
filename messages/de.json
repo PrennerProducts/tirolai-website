@@ -47,35 +47,99 @@
     "title": "Unsere Leistungen",
     "ki_potenzialanalyse": {
       "title": "KI-Potenzialanalyse",
-      "text": "Wir analysieren Prozesse und identifizieren sinnvolle KI-Anwendungen."
+      "text": "Wir analysieren Prozesse und identifizieren sinnvolle KI-Anwendungen.",
+      "paragraph1": "Viele Unternehmen wissen, dass Künstliche Intelligenz enormes Potenzial bietet — aber wo konkret ansetzen? In unserem KI-Potenzialworkshop analysieren wir gemeinsam Ihre Prozesse, Daten und Ziele.",
+      "paragraph2": "Wir identifizieren realistische Einsatzmöglichkeiten, berechnen Aufwand und Nutzen und legen gemeinsam die optimale Digitalisierungsstrategie fest. Unsere Beratung berücksichtigt auch mögliche Förderprogramme (aws, FFG, Land Tirol).",
+      "scope_title": "Leistungsumfang:",
+      "scope_item1": "Prozessanalyse & Use Case Mapping",
+      "scope_item2": "Datenverfügbarkeit und -qualität prüfen",
+      "scope_item3": "Wirtschaftlichkeitsbetrachtung",
+      "scope_item4": "Fördercheck & Förderberatung",
+      "scope_item5": "Roadmap für nächste Schritte"
     },
     "ai_prototyping": {
       "title": "KI-Prototyping",
-      "text": "Schnelle Prototypen für Chatbots, Prognosen, OCR und mehr."
+      "text": "Schnelle Prototypen für Chatbots, Prognosen, OCR und mehr.",
+      "paragraph1": "Mit KI-Prototyping können Sie Ideen schnell testen, ohne gleich in langwierige Entwicklungsphasen zu investieren.",
+      "paragraph2": "Wir setzen konkrete Anwendungsfälle wie Chatbots, Bilderkennung oder Vorhersagemodelle rasch und pragmatisch um – auf Wunsch auch mit realen Daten.",
+      "scope_title": "Typische Anwendungsfälle:",
+      "scope_item1": "Chatbots & virtuelle Assistenten",
+      "scope_item2": "OCR & Dokumentenverarbeitung",
+      "scope_item3": "Forecasting & Absatzprognosen",
+      "scope_item4": "Anomalieerkennung in Produktion & Logistik",
+      "scope_item5": "Qualitätskontrolle per Bilderkennung"
     },
     "ai_agents": {
       "title": "KI-Agenten & Co-Piloten",
-      "text": "Entwicklung intelligenter Agenten mit LLMs & RAG."
+      "text": "Entwicklung intelligenter Agenten mit LLMs & RAG.",
+      "paragraph1": "LLM-basierte Agenten können Wissen verstehen, verknüpfen und auf individuelle Anforderungen reagieren.",
+      "paragraph2": "Wir entwickeln smarte Co-Piloten und Chat-Systeme, die auf interne Daten zugreifen, Dokumente analysieren oder Entscheidungen vorbereiten.",
+      "scope_title": "Beispiele für intelligente Agenten:",
+      "scope_item1": "Conversational Agents & Chatbots (z. B. für Kundensupport & HR)",
+      "scope_item2": "Interne Wissensdatenbanken mit natürlicher Sprache durchsuchen",
+      "scope_item3": "Dokumenten-Analyse & automatisierte Zusammenfassungen",
+      "scope_item4": "AI Co-Piloten für Fachabteilungen (z. B. Recht, Medizin, Technik)",
+      "scope_item5": "LLM-gestützte API-Integration für komplexe Automatisierungen"
     },
     "prozessautomatisierung": {
       "title": "Prozessautomatisierung",
-      "text": "Backoffice, Buchhaltung & HR automatisieren mit RPA & Workflows."
+      "text": "Backoffice, Buchhaltung & HR automatisieren mit RPA & Workflows.",
+      "paragraph1": "Wiederkehrende, manuelle Aufgaben kosten Zeit und binden Ressourcen.",
+      "paragraph2": "Mit Robotic Process Automation (RPA) und smarten Workflow-Lösungen helfen wir, interne Abläufe effizienter zu gestalten und Fehler zu reduzieren.",
+      "scope_title": "Automatisierbare Prozesse:",
+      "scope_item1": "Automatisierte Rechnungsverarbeitung",
+      "scope_item2": "Personalverwaltung & Bewerbungsprozesse",
+      "scope_item3": "E-Mail- & Formular-Workflows",
+      "scope_item4": "CRM- und ERP-Schnittstellen",
+      "scope_item5": "Digitale Buchhaltung & Belegmanagement"
     },
     "web_app_entwicklung": {
       "title": "Web- & App-Entwicklung",
-      "text": "Digitale Plattformen, Kundenportale & Apps mit KI-Integration."
+      "text": "Digitale Plattformen, Kundenportale & Apps mit KI-Integration.",
+      "paragraph1": "Wir entwickeln maßgeschneiderte Weblösungen und mobile Apps, die nahtlos in Ihre Systeme integriert werden können.",
+      "paragraph2": "Dabei denken wir Funktionalität, UX/UI und Performance immer gemeinsam – optional mit eingebetteten KI-Funktionen.",
+      "scope_title": "Entwicklungsschwerpunkte:",
+      "scope_item1": "Kundenportale & Buchungssysteme",
+      "scope_item2": "Mitarbeiter-Dashboards & Reportingplattformen",
+      "scope_item3": "Produktions- & Qualitätsmanagement-Systeme",
+      "scope_item4": "Mobile Apps für Mitarbeiter & Kunden",
+      "scope_item5": "Web-Applikationen mit integrierten KI-Funktionen"
     },
     "iot_predictive": {
       "title": "IoT & Predictive Solutions",
-      "text": "Maschinendaten für vorausschauende Wartung & Industrie 4.0 nutzen."
+      "text": "Maschinendaten für vorausschauende Wartung & Industrie 4.0 nutzen.",
+      "paragraph1": "Wir verbinden IoT-Devices, erfassen Maschinendaten und entwickeln datenbasierte Modelle für vorausschauende Wartung und Produktionsoptimierung.",
+      "paragraph2": "Unsere Lösungen integrieren sich in bestehende Systeme (z. B. ERP/MES) und ermöglichen datengetriebene Entscheidungen in Echtzeit.",
+      "scope_title": "Komponenten smarter IoT-Lösungen:",
+      "scope_item1": "Sensoranbindung & Datenintegration",
+      "scope_item2": "Anomalieerkennung & Predictive Maintenance Modelle",
+      "scope_item3": "Datenplattformen & Dashboards",
+      "scope_item4": "Integration in bestehende ERP/MES-Systeme",
+      "scope_item5": "IoT-Security Audits"
     },
     "ai_schulungen": {
       "title": "KI-Schulungen",
-      "text": "Mitarbeitende fit für den sicheren Umgang mit KI machen."
+      "text": "Mitarbeitende fit für den sicheren Umgang mit KI machen.",
+      "paragraph1": "Viele Mitarbeitende stehen KI noch skeptisch gegenüber – mit dem richtigen Wissen können sie jedoch enorme Produktivitätspotenziale ausschöpfen.",
+      "paragraph2": "Wir bieten praxisnahe Schulungen zu GPT, AI-Tools im Alltag, Datenschutz, ethischen Fragen und effektiver Nutzung von Prompting.",
+      "scope_title": "Themenbeispiele:",
+      "scope_item1": "Prompt Engineering & effektive GPT-Nutzung",
+      "scope_item2": "AI-Tools im Tagesgeschäft",
+      "scope_item3": "Ethik & Compliance beim KI-Einsatz",
+      "scope_item4": "Datenschutz beim Arbeiten mit AI",
+      "scope_item5": "Change Management & Einführung im Team"
     },
     "foerderberatung": {
       "title": "Förderberatung",
-      "text": "Förderungen von aws, FFG & Land Tirol optimal nutzen."
+      "text": "Förderungen von aws, FFG & Land Tirol optimal nutzen.",
+      "paragraph1": "Digitale Innovationsprojekte werden von Land, Bund und EU finanziell unterstützt – aber oft bleiben Potenziale ungenutzt.",
+      "paragraph2": "Wir kennen die Förderlandschaft (aws, FFG, Land Tirol) und unterstützen bei Antragsstellung, Dokumentation und Projektumsetzung.",
+      "scope_title": "Typische Förderprogramme:",
+      "scope_item1": "aws KMU.Digital",
+      "scope_item2": "FFG Innovationsscheck",
+      "scope_item3": "FFG Basisprogramm",
+      "scope_item4": "Land Tirol Digitalisierungsförderung",
+      "scope_item5": "EU-Kofinanzierungen"
     },
     "learn_more": "Mehr erfahren →"
   },
