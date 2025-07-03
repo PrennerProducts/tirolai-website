@@ -60,35 +60,35 @@
     "title": "Our Services",
     "ki_potenzialanalyse": {
       "title": "AI Potential Analysis",
-      "text": "We analyze processes and identify meaningful AI applications."
+      "text": "We analyze your processes and identify meaningful AI use cases."
     },
     "ai_prototyping": {
       "title": "AI Prototyping",
-      "text": "Rapid AI prototypes for chatbots, forecasts, OCR & more."
+      "text": "Quick prototypes for chatbots, forecasting, OCR and more."
     },
     "ai_agents": {
       "title": "AI Agents & Co-Pilots",
-      "text": "Development of intelligent agents based on LLMs & RAG."
+      "text": "Intelligent agents powered by LLMs & retrieval-augmented generation (RAG)."
     },
     "prozessautomatisierung": {
       "title": "Process Automation",
-      "text": "Automate back office, accounting, and HR with RPA & workflows."
+      "text": "Automate back office, accounting & HR using RPA and smart workflows."
     },
     "web_app_entwicklung": {
       "title": "Web & App Development",
-      "text": "Digital platforms, customer portals & apps with AI integration."
+      "text": "Custom platforms, portals & apps with AI integration."
     },
     "iot_predictive": {
       "title": "IoT & Predictive Solutions",
-      "text": "Use machine data for predictive maintenance & Industry 4.0."
+      "text": "Leverage machine data for predictive maintenance & Industry 4.0."
     },
     "ai_schulungen": {
       "title": "AI Training",
-      "text": "Train employees for AI & safe AI usage."
+      "text": "Empower your team for responsible & efficient AI usage."
     },
     "foerderberatung": {
       "title": "Funding Consulting",
-      "text": "Optimize funding from aws, FFG & Land Tirol."
+      "text": "Make the most of funding from aws, FFG & the Province of Tyrol."
     },
     "learn_more": "Learn more →"
   }
